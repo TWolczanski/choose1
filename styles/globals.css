@@ -1,26 +1,28 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600&display=swap');
+/* font-family: 'Kaushan Script', cursive;
+   font-family: 'Poppins', sans-serif;
+*/
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --color-primary: #00136C;
+  --color-primary-faded: #8089B6;
+  --color-secondary: #F22B29;
+  --color-bg: #F0EFF4;
+  --color-bg-light: #FFFFFF;
+  --f-size-1: 1rem;
+  --f-size-2: 1.5rem;
+  --f-size-3: 3rem;
+  --f-weight-1: 400;
+  --f-weight-2: 500;
+  --f-weight-3: 600;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+span {
+  font-family: 'Poppins', sans-serif;
 }
