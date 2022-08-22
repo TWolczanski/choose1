@@ -22,17 +22,17 @@
 .unhovered {
   visibility: hidden;
   background-color: transparent;
-  transition: visibility 1s, background-color 1s;
+  transition: visibility 0.5s, background-color 0.5s;
 }
 
 .hovered {
   visibility: visible;
   background-color: var(--color-primary);
-  transition: background-color 1s;
+  transition: background-color 0.5s;
 }
 
 .active {
   visibility: visible;
   background-color: var(--color-secondary);
-  transition: background-color 1s;
+  transition: background-color 0.5s;
 }
