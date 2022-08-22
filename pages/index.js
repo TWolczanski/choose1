@@ -1,7 +1,5 @@
-import Logo from "../components/Logo";
-
-export default function Home() {
+export default function home() {
   return (
-    <Logo />
+    <div></div>
   );
 }
