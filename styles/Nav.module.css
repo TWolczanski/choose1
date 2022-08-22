@@ -1,0 +1,38 @@
+.pages {
+  display: flex;
+  justify-content: space-between;
+  gap: 7.5rem; 
+}
+
+.pages li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.bullet {
+  height: var(--size-1);
+  width: var(--size-1);
+  border-radius: 50%;
+  position: absolute;
+  left: calc(0px - (var(--size-1) * 2));
+}
+
+.unhovered {
+  visibility: hidden;
+  background-color: transparent;
+  transition: visibility 1s, background-color 1s;
+}
+
+.hovered {
+  visibility: visible;
+  background-color: var(--color-primary);
+  transition: background-color 1s;
+}
+
+.active {
+  visibility: visible;
+  background-color: var(--color-secondary);
+  transition: background-color 1s;
+}
