@@ -1,0 +1,25 @@
+.container {
+  padding-top: 1.7rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-2);
+}
+
+.navbar .container>*:nth-child(1) {
+  justify-self: start;
+}
+
+.navbar .container>*:nth-child(2) {
+  justify-self: center;
+}
+
+.navbar .container>*:nth-child(3) {
+  justify-self: end;
+}

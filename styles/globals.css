@@ -15,6 +15,9 @@
   --f-weight-1: 400;
   --f-weight-2: 500;
   --f-weight-3: 600;
+  --max-width: 1920px;
+  --size-1: 0.4375rem;
+  --size-2: 2.1875rem;
 }
 
 * {
@@ -23,6 +26,28 @@
   margin: 0;
 }
 
+body {
+  background-color: var(--color-bg);
+}
+
 span {
   font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-2);
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 10.5vw;
 }

@@ -1,7 +1,7 @@
 .pages {
   display: flex;
   justify-content: space-between;
-  gap: 7.5rem; 
+  gap: min(7.5rem, 6.25vw);
 }
 
 .pages li {
