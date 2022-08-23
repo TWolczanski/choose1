@@ -1,0 +1,30 @@
+.btn {
+  all: unset;
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-2);
+  font-family: 'Poppins', sans-serif;
+  padding: 0.625rem 1.5625rem;
+  border-radius: 50%/100%;
+  cursor: pointer;
+  transition: border-radius 0.5s;
+}
+
+.btn:hover {
+  border-radius: 0px;
+  /* border-radius: var(--size-1); */
+}
+
+.light {
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg-light);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-bg-light)
+}
