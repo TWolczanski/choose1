@@ -3,10 +3,11 @@
   font-size: var(--f-size-1);
   font-weight: var(--f-weight-2);
   font-family: 'Poppins', sans-serif;
-  padding: 0.625rem 1.5625rem;
-  border-radius: 50%/100%;
+  line-height: var(--line-height);
+  padding: 0.625rem var(--button-v-padding);
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: border-radius 0.5s;
+  transition: border-radius 0.5s linear;
 }
 
 .btn:hover {

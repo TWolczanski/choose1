@@ -18,6 +18,9 @@
   --max-width: 1920px;
   --size-1: 0.4375rem;
   --size-2: 2.1875rem;
+  --button-v-padding: 1.5625rem;
+  --line-height: 1.25rem;
+  --border-radius: calc(((var(--button-v-padding) * 2) + var(--line-height)) / 2);
 }
 
 * {
@@ -44,6 +47,10 @@ a {
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
   color: var(--color-primary);
+}
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
 }
 
 .container {
