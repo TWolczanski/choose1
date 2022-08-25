@@ -1,0 +1,40 @@
+.resultsBar {
+  height: var(--size-1);
+  border-radius: var(--size-1);
+  display: flex;
+  justify-content: center;
+  gap: var(--size-1);
+}
+
+.resultsBar li {
+  width: var(--size-1);
+  height: var(--size-1);
+  border-radius: var(--size-1);
+}
+
+.highlighted {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.percentage {
+  position: absolute;
+  top: calc(var(--size-1) * 2);
+}
+
+.primary {
+  background-color: var(--color-primary);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+}
+
+.light {
+  background-color: var(--color-bg-light);
+}
+
+.clickable {
+  cursor: pointer;
+}
