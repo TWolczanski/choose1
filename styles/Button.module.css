@@ -4,10 +4,10 @@
   font-weight: var(--f-weight-2);
   font-family: 'Poppins', sans-serif;
   line-height: var(--line-height);
-  padding: 0.625rem var(--button-v-padding);
+  padding: var(--button-v-padding) 1.5625rem;
   border-radius: var(--border-radius);
   cursor: pointer;
-  transition: border-radius 0.5s linear;
+  transition: border-radius 0.5s;
 }
 
 .btn:hover {
