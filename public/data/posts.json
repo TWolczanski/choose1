@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Ross - Logo Redesign Concept",
+    "type": "horizontal",
+    "images": [
+      "/img/ross-1.png",
+      "/img/ross-2.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Transfer Exploration",
+    "type": "vertical slider",
+    "images": [
+      "/img/transfer-1.png",
+      "/img/transfer-2.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "City of Caldwell Branding",
+    "type": "carousel",
+    "images": [
+      "/img/caldwell-1.png",
+      "/img/caldwell-2.png",
+      "/img/caldwell-3.png",
+      "/img/caldwell-4.png",
+      "/img/caldwell-5.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Homepage Explorations",
+    "type": "carousel",
+    "images": [
+      "/img/sketch-1.png",
+      "/img/sketch-2.png",
+      "/img/sketch-3.png",
+      "/img/sketch-4.png",
+      "/img/sketch-5.png",
+      "/img/sketch-6.png"
+    ],
+    "results": [45, 33, 57, 12, 49, 38],
+    "choice": 3
+  },
+  {
+    "id": 5,
+    "title": "Black Hops Brewery (Before & After)",
+    "type": "vertical",
+    "images": [
+      "/img/black-hops-1.png",
+      "/img/black-hops-2.png"
+    ],
+    "results": [102, 64],
+    "choice": 2
+  },
+  {
+    "id": 6,
+    "title": "Hard seltzer cans",
+    "type": "horizontal slider",
+    "images": [
+      "/img/cans-1.png",
+      "/img/cans-2.png"
+    ]
+  }
+]
