@@ -1,0 +1,25 @@
+.hero {
+  margin-top: 4.125rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero .main {
+  background-color: var(--color-primary);
+  padding: 10rem 5rem;
+  padding-left: var(--gutter);
+}
+
+.hero .main h1 {
+  margin-bottom: 2rem;
+}
+
+.hero .main p {
+  font-weight: var(--f-weight-2);
+  color: var(--color-bg-light);
+  margin-bottom: 2.5rem;
+}
+
+.hero .post {
+  padding-right: var(--gutter);
+}
