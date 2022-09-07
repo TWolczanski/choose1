@@ -11,9 +11,10 @@ export default function ResultsBar({
   if (!results && highlighted && onClicks) {
     fragments = onClicks.map((f, i) => (
       <li
+        key={i}
         className={`
           ${i + 1 === highlighted ? styles.secondary : styles.primary}
-          ${onClicks[i] ? styles.clickable : ""}
+          ${styles.clickable}
         `}
         onClick={f}
       ></li>
@@ -21,6 +22,7 @@ export default function ResultsBar({
   } else if (results && highlighted) {
     fragments = results.map((r, i) => (
       <li
+        key={i}
         className={`
           ${
             i + 1 === highlighted
@@ -45,7 +47,7 @@ export default function ResultsBar({
       className={`
         ${styles.resultsBar}
         ${fragments === null ? styles.light : ""}
-        ${className}
+        ${className ? className : ""}
       `}
     >
       {fragments}
