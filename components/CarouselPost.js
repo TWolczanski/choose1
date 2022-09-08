@@ -30,8 +30,8 @@ export default function CarouselPost({
           src={images[active]}
           layout="fill"
           objectFit="contain"
-          priority
-        ></Image>
+          priority={true}
+        />
       </div>
       <ResultsBar
         results={(choice || !clickable) && results}

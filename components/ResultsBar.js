@@ -24,11 +24,7 @@ export default function ResultsBar({
       <li
         key={i}
         className={`
-          ${
-            i + 1 === highlighted
-              ? styles.secondary + " " + styles.highlighted
-              : styles.primary
-          }
+          ${i + 1 === highlighted ? styles.secondary : styles.primary}
           ${onClicks[i] ? styles.clickable : ""}
         `}
         style={{flex: r}}
