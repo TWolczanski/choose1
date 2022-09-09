@@ -23,8 +23,8 @@ export default function CarouselPost({
       <div
         className={`
           ${styles.imageWrapper}
-          ${clickable && !chosen ? styles.clickable : ""}
-          ${roundedCorners ? styles.rounded : ""}
+          ${clickable && !chosen ? postStyles.clickable : ""}
+          ${roundedCorners ? postStyles.rounded : ""}
         `}
         onClick={() => {
           if (!chosen) {
@@ -40,8 +40,8 @@ export default function CarouselPost({
         />
         {clickable && (
           <div
-            className={`${styles.overlay} ${
-              active === chosen ? styles.secondary : styles.primary
+            className={`${postStyles.overlay} ${
+              active === chosen ? postStyles.secondary : postStyles.primary
             }`}
           ></div>
         )}
