@@ -7,7 +7,7 @@ export default function ResultsBar({
   showPercentage,
   className,
 }) {
-  let fragments = null;
+  let fragments = <li className={styles.empty}></li>;
   if (!results && highlighted && onClicks) {
     fragments = onClicks.map((f, i) => (
       <li
@@ -25,7 +25,7 @@ export default function ResultsBar({
         key={i}
         className={`
           ${i + 1 === highlighted ? styles.secondary : styles.primary}
-          ${onClicks[i] ? styles.clickable : ""}
+          ${onClicks && onClicks[i] ? styles.clickable : ""}
         `}
         style={{flex: r}}
         onClick={onClicks && onClicks[i]}
@@ -42,7 +42,6 @@ export default function ResultsBar({
     <ul
       className={`
         ${styles.resultsBar}
-        ${fragments === null ? styles.light : ""}
         ${className ? className : ""}
       `}
     >

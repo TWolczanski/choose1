@@ -24,6 +24,11 @@
   height: calc(2 * var(--size-2));
 }
 
+.resultsBar li.empty {
+  width: 100%;
+  background-color: var(--color-bg-light);
+}
+
 .percentage {
   position: absolute;
   top: calc(var(--size-1) * 2);
