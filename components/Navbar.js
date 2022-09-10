@@ -8,7 +8,11 @@ export default function Navbar() {
   return (
     <header className={styles.navbar}>
       <div className={`container ${styles.container}`}>
-        <Link href="/"><a><Logo variant="dark" /></a></Link>
+        <Link href="/">
+          <a>
+            <Logo variant="dark" />
+          </a>
+        </Link>
         <Nav />
         <div className={styles.buttons}>
           <Button variant="light" text="Sign in"></Button>
