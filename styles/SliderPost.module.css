@@ -1,0 +1,65 @@
+.images {
+  display: flex;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-bg-light);
+}
+
+.horizontal {
+  flex-direction: column;
+}
+
+.vertical {
+  flex-direction: row;
+}
+
+.slider {
+  flex-basis: calc(2 * var(--size-1));
+  flex-shrink: 0;
+  flex-grow: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontalCursor {
+  cursor: row-resize;
+}
+
+.verticalCursor {
+  cursor: col-resize;
+}
+
+.sliderPrimary {
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 100%;
+}
+
+.sliderBg {
+  background-color: var(--color-bg);
+  width: 100%;
+  height: 100%;
+}
+
+.horizontalClickableArea {
+  width: 100%;
+  height: var(--size-2);
+  position: absolute;
+  z-index: 1;
+}
+
+.verticalClickableArea {
+  width: var(--size-2);
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
