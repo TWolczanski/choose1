@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.iconWrapper {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: var(--size-1);
+}
