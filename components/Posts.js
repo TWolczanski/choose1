@@ -17,7 +17,7 @@ export default function Posts() {
   ];
 
   const [category, setCategory] = useState("All");
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState();
 
   useEffect(() => {
     const fetchPosts = async () => {
