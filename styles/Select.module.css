@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickableArea {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 1.5625rem * 2);
+  height: calc(100% + 0.9rem);
+}
+
+.select {
+  position: relative;
+}
+
+.chevron {
+  margin-left: 0.6rem;
+}
+
+.chevron .imageWrapper {
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 0.9rem);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--color-bg-light);
+  padding: 0.45rem 0;
+}
+
+.menu li {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-2);
+  background-color: var(--color-bg-light);
+  color: var(--color-primary-faded);
+  padding: 0.45rem 1.5625rem;
+}
+
+.menu li:hover {
+  color: var(--color-primary);
+}
+
+.menu .selected {
+  color: var(--color-primary);
+}
