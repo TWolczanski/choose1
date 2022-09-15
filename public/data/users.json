@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Jordan Jenkins",
+    "about": "Creative Director of brand @unfold",
+    "avatar": "/img/users/jordan-jenkins.jpg",
+    "points": {
+      "allTime": 1024,
+      "pastYear": 774,
+      "pastMonth": 59,
+      "pastWeek": 28
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jeroen van Eerden",
+    "about": "Freelance Logo & Brand identity Designer",
+    "avatar": "/img/users/jeroen-van-eerden.png",
+    "points": {
+      "allTime": 879,
+      "pastYear": 566,
+      "pastMonth": 101,
+      "pastWeek": 30
+    }
+  },
+  {
+    "id": 3,
+    "name": "Deividas Bielskis",
+    "about": "Logo & Brand Identity Designer",
+    "avatar": "/img/users/deividas-bielskis.png",
+    "points": {
+      "allTime": 843,
+      "pastYear": 843,
+      "pastMonth": 490,
+      "pastWeek": 135
+    }
+  },
+  {
+    "id": 4,
+    "name": "graphicdesigner123",
+    "about": "",
+    "avatar": "/img/users/avatar-1.jpg",
+    "points": {
+      "allTime": 801,
+      "pastYear": 801,
+      "pastMonth": 110,
+      "pastWeek": 12
+    }
+  },
+  {
+    "id": 5,
+    "name": "pajeetkumar",
+    "about": "",
+    "avatar": "/img/users/default-avatar.svg",
+    "points": {
+      "allTime": 762,
+      "pastYear": 665,
+      "pastMonth": 50,
+      "pastWeek": 21
+    }
+  },
+  {
+    "id": 6,
+    "name": "WalterWhite",
+    "about": "",
+    "avatar": "/img/users/default-avatar.svg",
+    "points": {
+      "allTime": 759,
+      "pastYear": 744,
+      "pastMonth": 221,
+      "pastWeek": 98
+    }
+  },
+  {
+    "id": 7,
+    "name": "ann.",
+    "about": "",
+    "avatar": "/img/users/avatar-2.jpg",
+    "points": {
+      "allTime": 728,
+      "pastYear": 728,
+      "pastMonth": 304,
+      "pastWeek": 77
+    }
+  },
+  {
+    "id": 8,
+    "name": "LoremIpsum22",
+    "about": "",
+    "avatar": "/img/users/avatar-3.jpg",
+    "points": {
+      "allTime": 719,
+      "pastYear": 607,
+      "pastMonth": 10,
+      "pastWeek": 10
+    }
+  },
+  {
+    "id": 9,
+    "name": "John The Designer",
+    "about": "",
+    "avatar": "/img/users/avatar-4.jpg",
+    "points": {
+      "allTime": 710,
+      "pastYear": 502,
+      "pastMonth": 69,
+      "pastWeek": 17
+    }
+  },
+  {
+    "id": 10,
+    "name": "johnDoe",
+    "about": "",
+    "avatar": "/img/users/avatar-5.jpg",
+    "points": {
+      "allTime": 698,
+      "pastYear": 698,
+      "pastMonth": 199,
+      "pastWeek": 46
+    }
+  }
+]

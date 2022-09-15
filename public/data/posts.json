@@ -2,44 +2,53 @@
   {
     "id": 1,
     "title": "Ross - Logo Redesign Concept",
-    "type": "horizontal",
+    "category": "Branding",
+    "type": "side by side",
+    "orientation": "horizontal",
     "images": [
-      "/img/ross-1.png",
-      "/img/ross-2.png"
-    ]
+      "/img/posts/ross-1.png",
+      "/img/posts/ross-2.png"
+    ],
+    "results": [6, 41]
   },
   {
     "id": 2,
     "title": "Transfer Exploration",
-    "type": "vertical slider",
+    "category": "UI/UX",
+    "type": "slider",
+    "orientation": "vertical",
     "images": [
-      "/img/transfer-1.png",
-      "/img/transfer-2.png"
-    ]
+      "/img/posts/transfer-1.png",
+      "/img/posts/transfer-2.png"
+    ],
+    "results": [39, 55]
   },
   {
     "id": 3,
     "title": "City of Caldwell Branding",
+    "category": "Branding",
     "type": "carousel",
     "images": [
-      "/img/caldwell-1.png",
-      "/img/caldwell-2.png",
-      "/img/caldwell-3.png",
-      "/img/caldwell-4.png",
-      "/img/caldwell-5.png"
-    ]
+      "/img/posts/caldwell-1.jpg",
+      "/img/posts/caldwell-2.jpg",
+      "/img/posts/caldwell-3.jpg",
+      "/img/posts/caldwell-4.jpg",
+      "/img/posts/caldwell-5.jpg"
+    ],
+    "results": [21, 110, 93, 44, 25]
   },
   {
     "id": 4,
     "title": "Homepage Explorations",
+    "category": "UI/UX",
     "type": "carousel",
     "images": [
-      "/img/sketch-1.png",
-      "/img/sketch-2.png",
-      "/img/sketch-3.png",
-      "/img/sketch-4.png",
-      "/img/sketch-5.png",
-      "/img/sketch-6.png"
+      "/img/posts/sketch-1.png",
+      "/img/posts/sketch-2.png",
+      "/img/posts/sketch-3.png",
+      "/img/posts/sketch-4.png",
+      "/img/posts/sketch-5.png",
+      "/img/posts/sketch-6.png"
     ],
     "results": [45, 33, 57, 12, 49, 38],
     "choice": 3
@@ -47,10 +56,12 @@
   {
     "id": 5,
     "title": "Black Hops Brewery (Before & After)",
-    "type": "vertical",
+    "category": "Branding",
+    "type": "side by side",
+    "orientation": "vertical",
     "images": [
-      "/img/black-hops-1.png",
-      "/img/black-hops-2.png"
+      "/img/posts/black-hops-1.png",
+      "/img/posts/black-hops-2.png"
     ],
     "results": [102, 64],
     "choice": 2
@@ -58,10 +69,13 @@
   {
     "id": 6,
     "title": "Hard seltzer cans",
-    "type": "horizontal slider",
+    "category": "Branding",
+    "type": "slider",
+    "orientation": "horizontal",
     "images": [
-      "/img/cans-1.png",
-      "/img/cans-2.png"
-    ]
+      "/img/posts/cans-1.png",
+      "/img/posts/cans-2.png"
+    ],
+    "results": [399, 287]
   }
 ]
