@@ -82,3 +82,8 @@ p {
   display: flex;
   flex-direction: column;
 }
+
+.header {
+  align-self: center;
+  margin-top: 7.5rem;
+}

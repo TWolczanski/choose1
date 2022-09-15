@@ -10,14 +10,14 @@ export default function home({heroPostData}) {
   return (
     <>
       <Hero postData={heroPostData} />
-      <h1 className={styles.header}>Recent posts</h1>
+      <h1 className="header">Recent posts</h1>
       <Posts />
       <Link href="/posts">
         <a className={styles.viewMore}>
           <Button variant="secondary" text="View more" />
         </a>
       </Link>
-      <h1 className={styles.header}>Top users</h1>
+      <h1 className="header">Top users</h1>
       <UserRanking top={3} />
       <Link href="/users">
         <a className={styles.viewMore}>
