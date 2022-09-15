@@ -43,49 +43,55 @@ export default function Posts() {
           </li>
         ))}
       </ul>
-      <ul className={styles.posts}>
-        {posts &&
-          posts.map((p) => {
-            let post;
-            switch (p.type) {
-              case "side by side":
-                post = (
-                  <SideBySidePost
-                    title={p.title}
-                    orientation={p.orientation}
-                    images={p.images}
-                    results={p.results}
-                    choice={p.choice}
-                  />
-                );
-                break;
-              case "slider":
-                post = (
-                  <SliderPost
-                    title={p.title}
-                    orientation={p.orientation}
-                    images={p.images}
-                    results={p.results}
-                    choice={p.choice}
-                  />
-                );
-                break;
-              case "carousel":
-                post = (
-                  <CarouselPost
-                    title={p.title}
-                    images={p.images}
-                    results={p.results}
-                    choice={p.choice}
-                    clickable
-                    roundedCorners
-                  />
-                );
-                break;
-            }
-            return <li key={p.id}>{post}</li>;
-          })}
-      </ul>
+      {posts &&
+        (posts.length > 0 ? (
+          <ul className={styles.posts}>
+            {posts.map((p) => {
+              let post;
+              switch (p.type) {
+                case "side by side":
+                  post = (
+                    <SideBySidePost
+                      title={p.title}
+                      orientation={p.orientation}
+                      images={p.images}
+                      results={p.results}
+                      choice={p.choice}
+                    />
+                  );
+                  break;
+                case "slider":
+                  post = (
+                    <SliderPost
+                      title={p.title}
+                      orientation={p.orientation}
+                      images={p.images}
+                      results={p.results}
+                      choice={p.choice}
+                    />
+                  );
+                  break;
+                case "carousel":
+                  post = (
+                    <CarouselPost
+                      title={p.title}
+                      images={p.images}
+                      results={p.results}
+                      choice={p.choice}
+                      clickable
+                      roundedCorners
+                    />
+                  );
+                  break;
+              }
+              return <li key={p.id}>{post}</li>;
+            })}
+          </ul>
+        ) : (
+          <p className={styles.info}>
+            It looks like there are no posts matching this category.
+          </p>
+        ))}
     </section>
   );
 }

@@ -19,3 +19,7 @@
   gap: 5rem var(--size-2);
   justify-content: center;
 }
+
+.info {
+  margin-top: 5rem;
+}
