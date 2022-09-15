@@ -61,10 +61,19 @@ h1 {
   color: var(--color-secondary);
 }
 
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--f-size-2);
+  font-weight: var(--f-weight-3);
+  color: var(--color-primary);
+}
+
 p {
   font-family: 'Poppins', sans-serif;
   font-size: var(--f-size-1);
+  font-weight: var(--f-weight-1);
   line-height: var(--line-height);
+  color: var(--color-primary-faded);
 }
 
 .container {
