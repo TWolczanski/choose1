@@ -1,4 +1,4 @@
-.container {
+.logo {
   display: flex;
   align-items: center;
 }
@@ -16,16 +16,24 @@
   position: absolute;
 }
 
-.circleDark {
+.dark {
   background-color: var(--color-primary);
 }
 
-.circleDark:nth-child(2) {
-  background-color: var(--color-secondary);
+.light {
+  background-color: var(--color-bg-light);
 }
 
-.circleLight {
-  background-color: var(--color-bg-light);
+.darkText {
+  color: var(--color-primary);
+}
+
+.lightText {
+  color: var(--color-bg-light);
+}
+
+.circle.dark:nth-child(2) {
+  background-color: var(--color-secondary);
 }
 
 .circle:nth-child(1) {
@@ -48,9 +56,8 @@
   left: 50%;
 }
 
-.name {
+.typography {
   font-size: var(--f-size-2);
   font-weight: var(--f-weight-3);
-  color: var(--color-primary);
   margin-left: 0.75rem;
 }

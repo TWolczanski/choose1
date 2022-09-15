@@ -1,31 +1,16 @@
 import styles from "../styles/Logo.module.css";
 
-export default function Logo({variant}) {
+export default function Logo({variant, className}) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.logo} ${className}`}>
       <div className={styles.symbol}>
-        <div
-          className={`${styles.circle} ${
-            variant === "dark" ? styles.circleDark : styles.circleLight
-          }`}
-        ></div>
-        <div
-          className={`${styles.circle} ${
-            variant === "dark" ? styles.circleDark : styles.circleLight
-          }`}
-        ></div>
-        <div
-          className={`${styles.circle} ${
-            variant === "dark" ? styles.circleDark : styles.circleLight
-          }`}
-        ></div>
-        <div
-          className={`${styles.circle} ${
-            variant === "dark" ? styles.circleDark : styles.circleLight
-          }`}
-        ></div>
+        {[...Array(4)].map((a, i) => (
+          <div key={i} className={`${styles.circle} ${styles[variant]}`}></div>
+        ))}
       </div>
-      <span className={styles.name}>choose1</span>
+      <span className={`${styles.typography} ${styles[variant + "Text"]}`}>
+        choose1
+      </span>
     </div>
   );
 }
