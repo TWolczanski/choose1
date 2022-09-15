@@ -1,5 +1,10 @@
+import Posts from "../components/Posts";
+
 export default function posts() {
   return (
-    <div></div>
+    <>
+      <h1 className="header">Posts</h1>
+      <Posts />
+    </>
   );
 }
