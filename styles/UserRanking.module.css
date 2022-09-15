@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--gutter);
+  margin-top: 2.5rem;
+}
+
+.timeframe {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 1.25rem;
+  cursor: pointer;
+}
+
+.ranking {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+  margin-top: 2.5rem;
+}
+
+.ranking li {
+  display: flex;
+  align-items: center;
+}
+
+.data {
+  margin-left: var(--size-2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.data h2 {
+  cursor: pointer;
+}
+
+.position {
+  position: absolute;
+  right: calc(100% + 7.5rem);
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-1);
+  color: var(--color-primary-faded);
+}

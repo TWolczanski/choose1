@@ -27,16 +27,6 @@
   cursor: pointer;
 }
 
-.avatarWrapper {
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: 1.25rem;
-  cursor: pointer;
-}
-
 .top2 {
   margin-top: 5rem;
 }

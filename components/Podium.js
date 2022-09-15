@@ -1,4 +1,5 @@
 import styles from "../styles/Podium.module.css";
+import userRankingStyles from "../styles/UserRanking.module.css";
 import Points from "./Points";
 import Image from "next/image";
 
@@ -7,12 +8,12 @@ export default function Podium({top1, top2, top3}) {
     <ul className={styles.podium}>
       <li className={styles.top2}>
         <Points amount={top2.points} />
-        <div className={styles.avatarWrapper}>
+        <div className={userRankingStyles.avatarWrapper}>
           <Image
             src={top2.avatar}
             alt={top2.name + " avatar"}
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
           />
         </div>
         <div className={styles.bottom}>
@@ -22,12 +23,12 @@ export default function Podium({top1, top2, top3}) {
       </li>
       <li className={styles.top1}>
         <Points amount={top1.points} />
-        <div className={styles.avatarWrapper}>
+        <div className={userRankingStyles.avatarWrapper}>
           <Image
             src={top1.avatar}
             alt={top1.name + " avatar"}
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
           />
         </div>
         <div className={styles.bottom}>
@@ -37,12 +38,12 @@ export default function Podium({top1, top2, top3}) {
       </li>
       <li className={styles.top3}>
         <Points amount={top3.points} />
-        <div className={styles.avatarWrapper}>
+        <div className={userRankingStyles.avatarWrapper}>
           <Image
             src={top3.avatar}
             alt={top3.name + " avatar"}
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
           />
         </div>
         <div className={styles.bottom}>
