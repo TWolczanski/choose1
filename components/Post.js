@@ -71,9 +71,11 @@ export default function Post({
   return (
     <div className={`${styles.postWrapper} ${className ? className : ""}`}>
       {post}
-      <Link href={`/posts/${id}`}>
-        <a className={styles.title}>{title}</a>
-      </Link>
+      {title && (
+        <Link href={`/posts/${id}`}>
+          <a className={styles.title}>{title}</a>
+        </Link>
+      )}
     </div>
   );
 }
