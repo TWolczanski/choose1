@@ -5,7 +5,6 @@ import styles from "../styles/SideBySidePost.module.css";
 import postStyles from "../styles/Post.module.css";
 
 export default function SideBySidePost({
-  title,
   orientation,
   images,
   results,
@@ -72,7 +71,6 @@ export default function SideBySidePost({
         }
         highlighted={chosen}
       />
-      <span className={postStyles.title}>{title}</span>
     </div>
   );
 }

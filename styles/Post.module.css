@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   text-overflow: ellipsis;
   align-self: center;

@@ -5,7 +5,6 @@ import styles from "../styles/CarouselPost.module.css";
 import postStyles from "../styles/Post.module.css";
 
 export default function CarouselPost({
-  title,
   images,
   results,
   choice,
@@ -55,7 +54,6 @@ export default function CarouselPost({
         highlighted={active}
         showPercentage={showPercentage}
       />
-      <span className={postStyles.title}>{title}</span>
     </div>
   );
 }

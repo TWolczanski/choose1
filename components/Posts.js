@@ -47,6 +47,7 @@ export default function Posts() {
             {posts.map((p) => (
               <li key={p.id}>
                 <Post
+                  id={p.id}
                   title={p.title}
                   type={p.type}
                   images={p.images}

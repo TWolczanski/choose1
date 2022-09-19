@@ -5,7 +5,6 @@ import styles from "../styles/SliderPost.module.css";
 import postStyles from "../styles/Post.module.css";
 
 export default function SliderPost({
-  title,
   orientation,
   images,
   results,
@@ -118,7 +117,6 @@ export default function SliderPost({
         }
         highlighted={chosen}
       />
-      <span className={postStyles.title}>{title}</span>
     </div>
   );
 }

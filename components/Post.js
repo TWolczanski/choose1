@@ -1,14 +1,23 @@
+import Link from "next/link";
 import CarouselPost from "./CarouselPost";
 import SideBySidePost from "./SideBySidePost";
 import SliderPost from "./SliderPost";
+import styles from "../styles/Post.module.css";
 
-export default function Post({title, type, images, results, choice}) {
+export default function Post({
+  id,
+  title,
+  type,
+  images,
+  results,
+  choice,
+  className,
+}) {
   let post;
   switch (type) {
     case "side by side horizontal":
       post = (
         <SideBySidePost
-          title={title}
           orientation="horizontal"
           images={images}
           results={results}
@@ -19,7 +28,6 @@ export default function Post({title, type, images, results, choice}) {
     case "side by side vertical":
       post = (
         <SideBySidePost
-          title={title}
           orientation="vertical"
           images={images}
           results={results}
@@ -30,7 +38,6 @@ export default function Post({title, type, images, results, choice}) {
     case "slider horizontal":
       post = (
         <SliderPost
-          title={title}
           orientation="horizontal"
           images={images}
           results={results}
@@ -41,7 +48,6 @@ export default function Post({title, type, images, results, choice}) {
     case "slider vertical":
       post = (
         <SliderPost
-          title={title}
           orientation="vertical"
           images={images}
           results={results}
@@ -52,7 +58,6 @@ export default function Post({title, type, images, results, choice}) {
     case "carousel":
       post = (
         <CarouselPost
-          title={title}
           images={images}
           results={results}
           choice={choice}
@@ -63,5 +68,12 @@ export default function Post({title, type, images, results, choice}) {
       break;
   }
 
-  return post;
+  return (
+    <div className={`${styles.postWrapper} ${className ? className : ""}`}>
+      {post}
+      <Link href={`/posts/${id}`}>
+        <a className={styles.title}>{title}</a>
+      </Link>
+    </div>
+  );
 }
