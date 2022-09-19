@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Jordan Jenkins",
     "about": "Creative Director of brand @unfold",
-    "avatar": "/img/users/jordan-jenkins.jpg",
+    "avatar": "/img/users/avatar-1.jpg",
     "points": {
       "allTime": 1024,
       "pastYear": 774,
@@ -15,7 +15,7 @@
     "id": 2,
     "name": "Jeroen van Eerden",
     "about": "Freelance Logo & Brand identity Designer",
-    "avatar": "/img/users/jeroen-van-eerden.png",
+    "avatar": "/img/users/avatar-2.png",
     "points": {
       "allTime": 879,
       "pastYear": 566,
@@ -27,7 +27,7 @@
     "id": 3,
     "name": "Deividas Bielskis",
     "about": "Logo & Brand Identity Designer",
-    "avatar": "/img/users/deividas-bielskis.png",
+    "avatar": "/img/users/avatar-3.png",
     "points": {
       "allTime": 843,
       "pastYear": 843,
@@ -39,7 +39,7 @@
     "id": 4,
     "name": "graphicdesigner123",
     "about": "",
-    "avatar": "/img/users/avatar-1.jpg",
+    "avatar": "/img/users/avatar-4.jpg",
     "points": {
       "allTime": 801,
       "pastYear": 801,
@@ -75,7 +75,7 @@
     "id": 7,
     "name": "ann.",
     "about": "",
-    "avatar": "/img/users/avatar-2.jpg",
+    "avatar": "/img/users/avatar-7.jpg",
     "points": {
       "allTime": 728,
       "pastYear": 728,
@@ -87,7 +87,7 @@
     "id": 8,
     "name": "LoremIpsum22",
     "about": "",
-    "avatar": "/img/users/avatar-3.jpg",
+    "avatar": "/img/users/avatar-8.jpg",
     "points": {
       "allTime": 719,
       "pastYear": 607,
@@ -99,7 +99,7 @@
     "id": 9,
     "name": "John The Designer",
     "about": "",
-    "avatar": "/img/users/avatar-4.jpg",
+    "avatar": "/img/users/avatar-9.jpg",
     "points": {
       "allTime": 710,
       "pastYear": 502,
@@ -111,12 +111,105 @@
     "id": 10,
     "name": "johnDoe",
     "about": "",
-    "avatar": "/img/users/avatar-5.jpg",
+    "avatar": "/img/users/avatar-10.jpg",
     "points": {
       "allTime": 698,
       "pastYear": 698,
       "pastMonth": 199,
       "pastWeek": 46
     }
+  },
+  {
+    "id": 11,
+    "name": "Dennis Pasyuk",
+    "about": "Brand Designer at unfold",
+    "avatar": "/img/users/avatar-11.webp",
+    "points": {
+      "allTime": 722,
+      "pastYear": 500,
+      "pastMonth": 120,
+      "pastWeek": 22
+    },
+    "website": "https://dennis.dribbble.com/",
+    "twitter": "dennispasyuk",
+    "instagram": "pasyukdesign",
+    "dribbble": "dennis",
+    "behance": "dennispasyuk"
+  },
+  {
+    "id": 12,
+    "name": "Aisha Ahya",
+    "about": "Hi, I'm drawing to design a better experience ✨ Visual explorer",
+    "avatar": "/img/users/avatar-12.webp",
+    "points": {
+      "allTime": 717,
+      "pastYear": 717,
+      "pastMonth": 219,
+      "pastWeek": 70
+    },
+    "website": "https://haricech.dribbble.com/",
+    "instagram": "aistighfar",
+    "twitter": "ilustrais_",
+    "dribbble": "haricech"
+  },
+  {
+    "id": 13,
+    "name": "Joe Hansen",
+    "about": "Art Director at MBB | Threadbare Goods",
+    "avatar": "/img/users/avatar-13.webp",
+    "points": {
+      "allTime": 695,
+      "pastYear": 602,
+      "pastMonth": 101,
+      "pastWeek": 45
+    },
+    "website": "https://www.threadbaregoods.com/",
+    "instagram": "joehcreative",
+    "dribbble": "joehansen"
+  },
+  {
+    "id": 14,
+    "name": "Augusto Lopes",
+    "about": "Designer at Sketch. Having fun cycling around.",
+    "avatar": "/img/users/avatar-14.webp",
+    "points": {
+      "allTime": 524,
+      "pastYear": 409,
+      "pastMonth": 51,
+      "pastWeek": 10
+    },
+    "website": "https://www.augustolopes.design/",
+    "dribbble": "augustolopes"
+  },
+  {
+    "id": 15,
+    "name": "DKNG",
+    "about": "Established in 2005, DKNG is a design studio based in Los Angeles, California with a focus on the music and entertainment industries.",
+    "avatar": "/img/users/avatar-15.webp",
+    "points": {
+      "allTime": 398,
+      "pastYear": 398,
+      "pastMonth": 44,
+      "pastWeek": 7
+    },
+    "website": "https://www.dkngstudios.com/",
+    "twitter": "DKNGstudios",
+    "instagram": "dkngstudios",
+    "dribbble": "DKNG",
+    "behance": "dkng"
+  },
+  {
+    "id": 16,
+    "name": "Ryan Pickard",
+    "about": "Contact – ryanpckrd {at} gmail {dot} com",
+    "avatar": "/img/users/avatar-16.webp",
+    "points": {
+      "allTime": 566,
+      "pastYear": 355,
+      "pastMonth": 29,
+      "pastWeek": 21
+    },
+    "website": "https://ryan-pickard.com/",
+    "dribbble": "ryanpickard"
   }
 ]

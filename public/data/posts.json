@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "authorId": 11,
     "title": "Ross - Logo Redesign Concept",
     "category": "Branding",
     "type": "side by side",
@@ -13,7 +14,9 @@
   },
   {
     "id": 2,
+    "authorId": 12,
     "title": "Transfer Exploration",
+    "description": "My last year's exploration project from my current company. I proposed 3 different styles (approaches) with similar personalities. Actually, this was a landing page project, but I'll present it as mobile for this preview post. Maybe I will upload the full version in another post 🌞",
     "category": "UI/UX",
     "type": "slider",
     "orientation": "vertical",
@@ -21,11 +24,23 @@
       "/img/posts/transfer-1.png",
       "/img/posts/transfer-2.png"
     ],
-    "results": [39, 55]
+    "results": [39, 55],
+    "comments": [
+      {
+        "authorId": 4,
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis. Ut quis aliquam risus."
+      },
+      {
+        "authorId": 2,
+        "body": "Lorem ipsum dolor sit amet"
+      }
+    ]
   },
   {
     "id": 3,
+    "authorId": 13,
     "title": "City of Caldwell Branding",
+    "description": "Caldwell, Kansas is a city rich with history that the community celebrates with pride with numerous tourism events highlighting their story. Located on the Chisholm Trail at the Kansas and Oklahoma border, the city quickly grew due to cattle drives from Texas. When rebranding the city of Caldwell, we aimed to tell their historic story while also capturing the current energy in the community to improve Caldwell and spur it into the future.",
     "category": "Branding",
     "type": "carousel",
     "images": [
@@ -35,11 +50,27 @@
       "/img/posts/caldwell-4.jpg",
       "/img/posts/caldwell-5.jpg"
     ],
-    "results": [21, 110, 93, 44, 25]
+    "results": [21, 110, 93, 44, 25],
+    "comments": [
+      {
+        "authorId": 1,
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis."
+      },
+      {
+        "authorId": 3,
+        "body": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "authorId": 11,
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis. Ut quis aliquam risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean in suscipit nisl. Suspendisse pharetra enim eget varius imperdiet. Curabitur accumsan sem libero, eu rhoncus risus feugiat commodo. Cras vulputate libero sit amet hendrerit sodales. Nulla sed leo id purus aliquam convallis. Praesent tincidunt fringilla porta. Sed mattis nunc risus, at lacinia lorem porta vel."
+      }
+    ]
   },
   {
     "id": 4,
+    "authorId": 14,
     "title": "Homepage Explorations",
+    "description": "Don't just stick to what you've came up with first. Always explore some more, even if you end up going back to your first option!\\n These are a few of the many explorations we’ve done for our Homepage, a page which we’ll be keeping iterating and improving upon.\\n Illustrations seen are done by Raphael Lopes and Ramsés Cabello",
     "category": "UI/UX",
     "type": "carousel",
     "images": [
@@ -51,11 +82,19 @@
       "/img/posts/sketch-6.png"
     ],
     "results": [45, 33, 57, 12, 49, 38],
-    "choice": 3
+    "choice": 3,
+    "comments": [
+      {
+        "authorId": 15,
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis."
+      }
+    ]
   },
   {
     "id": 5,
+    "authorId": 15,
     "title": "Black Hops Brewery (Before & After)",
+    "description": "As beer lovers we’re always excited for an opportunity to work with breweries, so when Australia’s Black Hops Brewery tasked us with converting their paper labeling system into new screen printed cans, we jumped at the chance. Working with the existing brand assets we introduced a two-tone system for a quicker read on shelves for each beer varietal, with the Black Hops mesh motifs coming along for the ride. More on the project on the DKNG site.",
     "category": "Branding",
     "type": "side by side",
     "orientation": "vertical",
@@ -68,7 +107,9 @@
   },
   {
     "id": 6,
+    "authorId": 16,
     "title": "Hard seltzer cans",
+    "description": "killed direction(s) for a new hard seltzer line that was recently launched.",
     "category": "Branding",
     "type": "slider",
     "orientation": "horizontal",
@@ -76,6 +117,20 @@
       "/img/posts/cans-1.png",
       "/img/posts/cans-2.png"
     ],
-    "results": [399, 287]
+    "results": [399, 287],
+    "comments": [
+      {
+        "authorId": 7,
+        "body": "Cras vulputate libero sit amet hendrerit sodales. Nulla sed leo id purus aliquam convallis."
+      },
+      {
+        "authorId": 12,
+        "body": "Ut quis aliquam risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur accumsan sem libero, eu rhoncus risus feugiat commodo."
+      },
+      {
+        "authorId": 6,
+        "body": "Aenean in suscipit nisl. Suspendisse pharetra enim eget varius imperdiet."
+      }
+    ]
   }
 ]
