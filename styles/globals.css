@@ -17,14 +17,20 @@
   --size-1: 0.4375rem;
   --size-2: 2.1875rem;
   --button-v-padding: 0.45rem;
-  --line-height: 1.625rem;
-  --border-radius: calc(((var(--button-v-padding) * 2) + var(--line-height)) / 2);
+  --line-height-1: 1.625rem;
+  --line-height-2: 2.25rem;
+  --border-radius: calc(((var(--button-v-padding) * 2) + var(--line-height-1)) / 2);
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+::selection {
+  color: var(--color-bg-light);
+  background: var(--color-secondary);
 }
 
 body {
@@ -65,6 +71,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: var(--f-size-2);
   font-weight: var(--f-weight-3);
+  line-height: var(--line-height-2);
   color: var(--color-primary);
 }
 
@@ -72,7 +79,7 @@ p {
   font-family: 'Poppins', sans-serif;
   font-size: var(--f-size-1);
   font-weight: var(--f-weight-1);
-  line-height: var(--line-height);
+  line-height: var(--line-height-1);
   color: var(--color-primary-faded);
 }
 
