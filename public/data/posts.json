@@ -4,8 +4,7 @@
     "authorId": 11,
     "title": "Ross - Logo Redesign Concept",
     "category": "Branding",
-    "type": "side by side",
-    "orientation": "horizontal",
+    "type": "side by side horizontal",
     "images": [
       "/img/posts/ross-1.png",
       "/img/posts/ross-2.png"
@@ -18,8 +17,7 @@
     "title": "Transfer Exploration",
     "description": "My last year's exploration project from my current company. I proposed 3 different styles (approaches) with similar personalities. Actually, this was a landing page project, but I'll present it as mobile for this preview post. Maybe I will upload the full version in another post 🌞",
     "category": "UI/UX",
-    "type": "slider",
-    "orientation": "vertical",
+    "type": "slider vertical",
     "images": [
       "/img/posts/transfer-1.png",
       "/img/posts/transfer-2.png"
@@ -28,11 +26,13 @@
     "comments": [
       {
         "authorId": 4,
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis. Ut quis aliquam risus."
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis. Ut quis aliquam risus.",
+        "timestamp": "2022-09-20T16:16:28+0000"
       },
       {
         "authorId": 2,
-        "body": "Lorem ipsum dolor sit amet"
+        "body": "Lorem ipsum dolor sit amet",
+        "timestamp": "2022-09-20T16:17:10+0000"
       }
     ]
   },
@@ -54,15 +54,18 @@
     "comments": [
       {
         "authorId": 1,
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis."
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis.",
+        "timestamp": "2022-09-19T09:15:43+0000"
       },
       {
         "authorId": 3,
-        "body": "Lorem ipsum dolor sit amet"
+        "body": "Lorem ipsum dolor sit amet",
+        "timestamp": "2022-09-19T11:22:37+0000"
       },
       {
         "authorId": 11,
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis. Ut quis aliquam risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean in suscipit nisl. Suspendisse pharetra enim eget varius imperdiet. Curabitur accumsan sem libero, eu rhoncus risus feugiat commodo. Cras vulputate libero sit amet hendrerit sodales. Nulla sed leo id purus aliquam convallis. Praesent tincidunt fringilla porta. Sed mattis nunc risus, at lacinia lorem porta vel."
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis. Ut quis aliquam risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean in suscipit nisl. Suspendisse pharetra enim eget varius imperdiet. Curabitur accumsan sem libero, eu rhoncus risus feugiat commodo. Cras vulputate libero sit amet hendrerit sodales. Nulla sed leo id purus aliquam convallis. Praesent tincidunt fringilla porta. Sed mattis nunc risus, at lacinia lorem porta vel.",
+        "timestamp": "2022-09-20T10:10:01+0000"
       }
     ]
   },
@@ -70,7 +73,7 @@
     "id": 4,
     "authorId": 14,
     "title": "Homepage Explorations",
-    "description": "Don't just stick to what you've came up with first. Always explore some more, even if you end up going back to your first option!\\n These are a few of the many explorations we’ve done for our Homepage, a page which we’ll be keeping iterating and improving upon.\\n Illustrations seen are done by Raphael Lopes and Ramsés Cabello",
+    "description": "Don't just stick to what you've came up with first. Always explore some more, even if you end up going back to your first option!\\nThese are a few of the many explorations we’ve done for our Homepage, a page which we’ll be keeping iterating and improving upon.\\nIllustrations seen are done by Raphael Lopes and Ramsés Cabello",
     "category": "UI/UX",
     "type": "carousel",
     "images": [
@@ -86,7 +89,8 @@
     "comments": [
       {
         "authorId": 15,
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis."
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ipsum a neque tincidunt mattis. Pellentesque tristique sagittis interdum. Sed sagittis et ante a facilisis.",
+        "timestamp": "2022-09-18T15:12:09+0000"
       }
     ]
   },
@@ -96,8 +100,7 @@
     "title": "Black Hops Brewery (Before & After)",
     "description": "As beer lovers we’re always excited for an opportunity to work with breweries, so when Australia’s Black Hops Brewery tasked us with converting their paper labeling system into new screen printed cans, we jumped at the chance. Working with the existing brand assets we introduced a two-tone system for a quicker read on shelves for each beer varietal, with the Black Hops mesh motifs coming along for the ride. More on the project on the DKNG site.",
     "category": "Branding",
-    "type": "side by side",
-    "orientation": "vertical",
+    "type": "side by side vertical",
     "images": [
       "/img/posts/black-hops-1.png",
       "/img/posts/black-hops-2.png"
@@ -111,8 +114,7 @@
     "title": "Hard seltzer cans",
     "description": "killed direction(s) for a new hard seltzer line that was recently launched.",
     "category": "Branding",
-    "type": "slider",
-    "orientation": "horizontal",
+    "type": "slider horizontal",
     "images": [
       "/img/posts/cans-1.png",
       "/img/posts/cans-2.png"
@@ -121,15 +123,18 @@
     "comments": [
       {
         "authorId": 7,
-        "body": "Cras vulputate libero sit amet hendrerit sodales. Nulla sed leo id purus aliquam convallis."
+        "body": "Cras vulputate libero sit amet hendrerit sodales. Nulla sed leo id purus aliquam convallis.",
+        "timestamp": "2022-09-18T19:17:44+0000"
       },
       {
         "authorId": 12,
-        "body": "Ut quis aliquam risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur accumsan sem libero, eu rhoncus risus feugiat commodo."
+        "body": "Ut quis aliquam risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur accumsan sem libero, eu rhoncus risus feugiat commodo.",
+        "timestamp": "2022-09-19T21:37:30+0000"
       },
       {
         "authorId": 6,
-        "body": "Aenean in suscipit nisl. Suspendisse pharetra enim eget varius imperdiet."
+        "body": "Aenean in suscipit nisl. Suspendisse pharetra enim eget varius imperdiet.",
+        "timestamp": "2022-09-19T23:51:20+0000"
       }
     ]
   }
