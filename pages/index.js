@@ -4,9 +4,9 @@ import Button from "../components/Button";
 import UserRanking from "../components/UserRanking";
 import Link from "next/link";
 import {server} from "../config";
-import styles from "../styles/home.module.css";
+import styles from "../styles/HomePage.module.css";
 
-export default function home({heroPostData}) {
+export default function HomePage({heroPostData}) {
   return (
     <>
       <Hero postData={heroPostData} />
