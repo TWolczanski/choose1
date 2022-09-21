@@ -2,10 +2,10 @@ import styles from "../styles/Author.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Author({id, name, avatar}) {
+export default function Author({id, name, avatar, className}) {
   return (
     <Link href={`/users/${id}`}>
-      <a className={styles.author}>
+      <a className={`${styles.author} ${className}`}>
         <div className={styles.avatarWrapper}>
           <Image
             src={avatar}
