@@ -11,7 +11,7 @@ export default function Author({id, name, avatar, className}) {
             src={avatar}
             alt="author's avatar"
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
           />
         </div>
         <span>{name}</span>
