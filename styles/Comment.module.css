@@ -4,13 +4,13 @@
 }
 
 .author {
-  padding: 0 3.5rem;
+  padding: 0 var(--comment-h-padding);
 }
 
 .body {
   background-color: var(--color-bg-light);
   border-radius: var(--border-radius);
-  padding: 2.5rem 3.5rem;
+  padding: var(--comment-v-padding) var(--comment-h-padding);
 }
 
 .timestamp {
@@ -18,6 +18,6 @@
   line-height: var(--line-height-1);
   color: var(--color-primary-faded);
   align-self: flex-end;
-  padding: 0 3.5rem;
+  padding: 0 var(--comment-h-padding);
   margin-top: 1rem;
 }

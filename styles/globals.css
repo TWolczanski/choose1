@@ -17,6 +17,8 @@
   --size-1: 0.4375rem;
   --size-2: 2.1875rem;
   --button-v-padding: 0.45rem;
+  --comment-v-padding: 2.5rem;
+  --comment-h-padding: 3.5rem;
   --line-height-1: 1.625rem;
   --line-height-2: 2.25rem;
   --border-radius: calc(((var(--button-v-padding) * 2) + var(--line-height-1)) / 2);
