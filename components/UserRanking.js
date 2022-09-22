@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Podium from "./Podium";
 import Select from "./Select";
 import Points from "./Points";
-import Image from "next/image";
+import Avatar from "./Avatar";
 import styles from "../styles/UserRanking.module.css";
 
 export default function UserRanking({top}) {
@@ -64,14 +64,7 @@ export default function UserRanking({top}) {
         <ul className={styles.ranking}>
           {topUsers.slice(3).map((u, i) => (
             <li key={u.id}>
-              <div className={styles.avatarWrapper}>
-                <Image
-                  src={u.avatar}
-                  alt={u.name + " avatar"}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
+              <Avatar img={u.avatar} size="big" className={styles.avatar} />
               <div className={styles.data}>
                 <h2>{u.name}</h2>
                 <Points amount={u.points} />
