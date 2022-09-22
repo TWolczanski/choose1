@@ -1,5 +1,6 @@
 import styles from "../styles/Comment.module.css";
 import Author from "./Author";
+import Paragraph from "./Paragraph";
 
 export default function Comment({author, body, timestamp}) {
   return (
@@ -10,7 +11,7 @@ export default function Comment({author, body, timestamp}) {
         avatar={author.avatar}
         className={styles.author}
       />
-      <p className={styles.body}>{body}</p>
+      <Paragraph text={body} className={styles.body} />
       <span className={styles.timestamp}>
         {new Date(timestamp).toLocaleString("en-GB")}
       </span>
