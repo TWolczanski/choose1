@@ -13,7 +13,7 @@ export default function Comment({author, body, timestamp}) {
       />
       <Paragraph text={body} className={styles.body} />
       <span className={styles.timestamp}>
-        {new Date(timestamp).toLocaleString("en-GB")}
+        {new Date(timestamp).toLocaleString("en-GB").replaceAll("/", "-")}
       </span>
     </article>
   );
