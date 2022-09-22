@@ -1,0 +1,23 @@
+.textarea {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formFocused {
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  padding-bottom: 1.25rem;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
