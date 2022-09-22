@@ -1,0 +1,17 @@
+.textarea {
+  border: none;
+  overflow: hidden;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  background-color: var(--color-bg-light);
+  padding: var(--comment-v-padding) var(--comment-h-padding);
+  border-radius: var(--border-radius);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-1);
+  line-height: var(--line-height-1);
+  color: var(--color-primary-faded);
+}
