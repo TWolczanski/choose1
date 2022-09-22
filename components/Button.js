@@ -1,10 +1,12 @@
 import styles from "../styles/Button.module.css";
 
-export default function Button({variant, text, onClick, className}) {
+export default function Button({variant, text, className, ...props}) {
   return (
     <button
-      className={`${styles.btn} ${styles[variant]} ${className}`}
-      onClick={onClick}
+      {...props}
+      className={`${styles.btn} ${styles[variant]} ${
+        className ? className : ""
+      }`}
     >
       {text}
     </button>
