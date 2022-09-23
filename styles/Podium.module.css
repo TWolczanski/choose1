@@ -14,7 +14,6 @@
 
 .avatar {
   margin-top: 1.25rem;
-  cursor: pointer;
 }
 
 .bottom {
@@ -25,10 +24,6 @@
 
 .bottom p {
   margin-top: 0.75rem;
-}
-
-.bottom h2 {
-  cursor: pointer;
 }
 
 .top2 {

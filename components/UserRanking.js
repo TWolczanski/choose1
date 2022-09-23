@@ -3,6 +3,7 @@ import Podium from "./Podium";
 import Select from "./Select";
 import Points from "./Points";
 import Avatar from "./Avatar";
+import Link from "next/link";
 import styles from "../styles/UserRanking.module.css";
 
 export default function UserRanking({top}) {
@@ -64,9 +65,17 @@ export default function UserRanking({top}) {
         <ul className={styles.ranking}>
           {topUsers.slice(3).map((u, i) => (
             <li key={u.id}>
-              <Avatar img={u.avatar} size="big" className={styles.avatar} />
+              <Link href={`/users/${u.id}`}>
+                <a>
+                  <Avatar img={u.avatar} size="big" className={styles.avatar} />
+                </a>
+              </Link>
               <div className={styles.data}>
-                <h2>{u.name}</h2>
+                <Link href={`/users/${u.id}`}>
+                  <a>
+                    <h2>{u.name}</h2>
+                  </a>
+                </Link>
                 <Points amount={u.points} />
               </div>
               <span className={styles.position}>{i + 4}.</span>
