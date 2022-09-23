@@ -3,7 +3,7 @@ import Button from "./Button";
 import Post from "./Post";
 import styles from "../styles/Posts.module.css";
 
-export default function Posts() {
+export default function Posts({author}) {
   const categories = [
     "All",
     "Branding",
@@ -22,7 +22,11 @@ export default function Posts() {
       const data = await fetch("/data/posts.json");
       const posts = await data.json();
       setPosts(
-        posts.filter((p) => p.category === category || category === "All")
+        posts.filter(
+          (p) =>
+            (p.category === category || category === "All") &&
+            (p.authorId === author || !author)
+        )
       );
     };
     fetchPosts();
