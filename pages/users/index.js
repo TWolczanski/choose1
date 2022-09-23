@@ -1,4 +1,4 @@
-import UserRanking from "../components/UserRanking";
+import UserRanking from "../../components/UserRanking";
 
 export default function UsersPage() {
   return (

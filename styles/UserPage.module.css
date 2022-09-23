@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--gutter);
+}
+
+.avatar {
+  margin-top: 7.5rem;
+}
+
+.name {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.about {
+  margin-top: 0.75rem;
+  text-align: center;
+  max-width: 750px;
+}
+
+.points {
+  margin-top: 1.25rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.25rem;
+  /* gap: var(--size-2); */
+  margin-top: 2.5rem;
+}
+
+.icon {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+}
+
+.comments {
+  width: 100%;
+  max-width: 750px;
+  margin-top: 2.5rem;
+}
+
+.noComments {
+  font-weight: var(--f-weight-1);
+  color: var(--color-primary-faded);
+  margin-top: 2.5rem;
+}
