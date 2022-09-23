@@ -8,7 +8,6 @@ import Paragraph from "../../components/Paragraph";
 import {useState} from "react";
 
 export default function PostPage({
-  id,
   title,
   author,
   description,
@@ -24,7 +23,6 @@ export default function PostPage({
   return (
     <div className={styles.container}>
       <Post
-        id={id}
         type={type}
         images={images}
         results={results}
