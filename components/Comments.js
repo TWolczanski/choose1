@@ -1,9 +1,12 @@
 import Comment from "./Comment";
 import styles from "../styles/Comments.module.css";
 
-export default function Comments({comments}) {
+export default function Comments({comments, className, ...props}) {
   return (
-    <ul className={styles.comments}>
+    <ul
+      {...props}
+      className={`${styles.comments} ${className ? className : ""}`}
+    >
       {comments &&
         comments.map((c, i) => (
           <li key={i}>
