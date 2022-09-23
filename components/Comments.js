@@ -10,7 +10,12 @@ export default function Comments({comments, className, ...props}) {
       {comments &&
         comments.map((c, i) => (
           <li key={i}>
-            <Comment author={c.author} body={c.body} timestamp={c.timestamp} />
+            <Comment
+              author={c.author}
+              source={c.source}
+              body={c.body}
+              timestamp={c.timestamp}
+            />
           </li>
         ))}
     </ul>
