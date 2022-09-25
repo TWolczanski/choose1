@@ -1,4 +1,4 @@
-.container {
+.navbar {
   padding: 0 var(--gutter);
   padding-top: 1.7rem;
   display: grid;
@@ -6,21 +6,16 @@
   align-items: center;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--size-2);
-}
-
-.navbar .container>*:nth-child(1) {
+.logo {
   justify-self: start;
 }
 
-.navbar .container>*:nth-child(2) {
+.nav {
   justify-self: center;
 }
 
-.navbar .container>*:nth-child(3) {
+.buttons {
   justify-self: end;
+  display: flex;
+  gap: var(--size-2);
 }

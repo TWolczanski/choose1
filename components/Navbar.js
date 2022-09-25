@@ -7,17 +7,15 @@ import styles from "../styles/Navbar.module.css";
 export default function Navbar() {
   return (
     <header className={styles.navbar}>
-      <div className={`container ${styles.container}`}>
-        <Link href="/">
-          <a>
-            <Logo variant="dark" />
-          </a>
-        </Link>
-        <Nav />
-        <div className={styles.buttons}>
-          <Button variant="light" text="Sign in"></Button>
-          <Button variant="primary" text="Sign up"></Button>
-        </div>
+      <Link href="/">
+        <a className={styles.logo}>
+          <Logo variant="dark" />
+        </a>
+      </Link>
+      <Nav className={styles.nav} />
+      <div className={styles.buttons}>
+        <Button variant="light" text="Sign in"></Button>
+        <Button variant="primary" text="Sign up"></Button>
       </div>
     </header>
   );
