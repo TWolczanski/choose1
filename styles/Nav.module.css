@@ -1,14 +1,16 @@
 .pages {
   display: flex;
-  justify-content: space-between;
   gap: min(7.5rem, 6.25vw);
 }
 
 .pages li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
+}
+
+.pages li a {
+  text-transform: capitalize;
 }
 
 .bullet {
@@ -19,7 +21,7 @@
   left: calc(0px - (var(--size-1) * 2));
 }
 
-.unhovered {
+.notHovered {
   visibility: hidden;
   background-color: transparent;
   transition: visibility 0.5s, background-color 0.5s;

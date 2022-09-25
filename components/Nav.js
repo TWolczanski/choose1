@@ -3,60 +3,31 @@ import {useRouter} from "next/router";
 import {useState} from "react";
 import styles from "../styles/Nav.module.css";
 
-export default function Nav() {
+export default function Nav(props) {
+  const pages = ["about", "posts", "users"];
   const [hovered, setHovered] = useState(null);
   const router = useRouter();
-  
+
   return (
-    <nav>
+    <nav {...props}>
       <ul className={styles.pages}>
-        <li>
-          <div
-            className={`${styles.bullet} ${
-              hovered === "about" ? styles.hovered : styles.unhovered
-            } ${router.pathname === "/about" ? styles.active : ""}`}
-          ></div>
-          <Link href="/about">
-            <a
-              onMouseEnter={() => setHovered("about")}
-              onMouseLeave={() => setHovered(null)}
-            >
-              About
-            </a>
-          </Link>
-        </li>
-
-        <li>
-          <div
-            className={`${styles.bullet} ${
-              hovered === "posts" ? styles.hovered : styles.unhovered
-            } ${router.pathname === "/posts" ? styles.active : ""}`}
-          ></div>
-          <Link href="/posts">
-            <a
-              onMouseEnter={() => setHovered("posts")}
-              onMouseLeave={() => setHovered(null)}
-            >
-              Posts
-            </a>
-          </Link>
-        </li>
-
-        <li>
-          <div
-            className={`${styles.bullet} ${
-              hovered === "users" ? styles.hovered : styles.unhovered
-            } ${router.pathname === "/users" ? styles.active : ""}`}
-          ></div>
-          <Link href="/users">
-            <a
-              onMouseEnter={() => setHovered("users")}
-              onMouseLeave={() => setHovered(null)}
-            >
-              Users
-            </a>
-          </Link>
-        </li>
+        {pages.map((p) => (
+          <li key={p}>
+            <div
+              className={`${styles.bullet} ${
+                hovered === p ? styles.hovered : styles.notHovered
+              } ${router.pathname === "/" + p ? styles.active : ""}`}
+            ></div>
+            <Link href={"/" + p}>
+              <a
+                onMouseEnter={() => setHovered(p)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                {p}
+              </a>
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
