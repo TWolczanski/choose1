@@ -1,12 +1,15 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
+import {ModalProvider} from "../context/ModalContext";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({Component, pageProps}) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ModalProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ModalProvider>
   );
 }
 
-export default MyApp
+export default MyApp;
