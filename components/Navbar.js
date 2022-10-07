@@ -3,10 +3,12 @@ import Logo from "./Logo";
 import Nav from "./Nav";
 import Button from "./Button";
 import styles from "../styles/Navbar.module.css";
+import SignInForm from "./SignInForm";
+import SignUpForm from "./SignUpForm";
 import {useModal} from "../context/ModalContext";
 
 export default function Navbar() {
-  const {setSignInOpen, setSignUpOpen} = useModal();
+  const {setContent} = useModal();
   return (
     <header className={styles.navbar}>
       <Link href="/">
@@ -19,12 +21,12 @@ export default function Navbar() {
         <Button
           variant="light"
           text="Sign in"
-          onClick={() => setSignInOpen(true)}
+          onClick={() => setContent(<SignInForm />)}
         ></Button>
         <Button
           variant="primary"
           text="Sign up"
-          onClick={() => setSignUpOpen(true)}
+          onClick={() => setContent(<SignUpForm />)}
         ></Button>
       </div>
     </header>
