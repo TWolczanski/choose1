@@ -1,7 +1,8 @@
 import {createContext, useContext, useState} from "react";
-import SignInModal from "../components/SignInModal";
-import SignUpModal from "../components/SignUpModal";
-import NewPostModal from "../components/NewPostModal";
+import SignIn from "../components/SignIn";
+import SignUp from "../components/SignUp";
+import NewPost from "../components/NewPost";
+import Modal from "../components/Modal";
 
 const ModalContext = createContext();
 
@@ -11,11 +12,22 @@ export function ModalProvider({children}) {
   const [newPostOpen, setNewPostOpen] = useState(false);
   return (
     <ModalContext.Provider
-      value={{setSignInOpen, setSignUpOpen, setNewPostOpen}}
+      value={{
+        open: signInOpen || signUpOpen || newPostOpen,
+        setSignInOpen,
+        setSignUpOpen,
+        setNewPostOpen,
+      }}
     >
-      {signInOpen && <SignInModal onClose={() => setSignInOpen(false)} />}
-      {signUpOpen && <SignUpModal onClose={() => setSignUpOpen(false)} />}
-      {newPostOpen && <NewPostModal onClose={() => setNewPostOpen(false)} />}
+      <Modal open={signInOpen} close={() => setSignInOpen(false)}>
+        <SignIn />
+      </Modal>
+      <Modal open={signUpOpen} close={() => setSignUpOpen(false)}>
+        <SignUp />
+      </Modal>
+      <Modal open={newPostOpen} close={() => setNewPostOpen(false)}>
+        <NewPost />
+      </Modal>
       {children}
     </ModalContext.Provider>
   );
