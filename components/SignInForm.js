@@ -1,0 +1,48 @@
+import {useState} from "react";
+import styles from "../styles/AccountForm.module.css";
+import Button from "./Button";
+
+export default function SignInForm() {
+  const [error, setError] = useState();
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const response = await fetch("/api/forms/sign-in", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: event.target.username.value,
+        password: event.target.password.value,
+      }),
+    });
+    const result = await response.json();
+    if (result.error) {
+      setError(result.error);
+    }
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      onChange={() => setError()}
+      className={styles.form}
+    >
+      <h1>Sign in</h1>
+      <div>
+        <label htmlFor="username">Username</label>
+        <input type="text" name="username" />
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input type="password" name="password" />
+      </div>
+      {error ? (
+        <span className={styles.error}>{error}</span>
+      ) : (
+        <Button variant="secondary" text="Sign in" />
+      )}
+    </form>
+  );
+}

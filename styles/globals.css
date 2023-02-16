@@ -91,6 +91,44 @@ p {
   color: var(--color-primary-faded);
 }
 
+label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-2);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 35rem;
+  max-width: 35rem;
+  padding: 0.45rem 1.5625rem;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-1);
+  color: var(--color-primary-faded);
+  line-height: var(--line-height-1);
+}
+
+input[type="password"] {
+  font-family: 'Verdana', monospace;
+  letter-spacing: 0.15rem;
+}
+
+/* input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: var(--color-primary-faded);
+  color: var(--color-bg-light);
+} */
+
 .header {
   align-self: center;
   margin-top: 7.5rem;

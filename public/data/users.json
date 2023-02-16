@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Jordan Jenkins",
+    "password": "qwerty",
     "about": "Creative Director of brand @unfold",
     "avatar": "/img/users/avatar-1.jpg",
     "points": {
@@ -14,6 +15,7 @@
   {
     "id": 2,
     "name": "Jeroen van Eerden",
+    "password": "abc123",
     "about": "Freelance Logo & Brand identity Designer",
     "avatar": "/img/users/avatar-2.png",
     "points": {
@@ -26,6 +28,7 @@
   {
     "id": 3,
     "name": "Deividas Bielskis",
+    "password": "password",
     "about": "Logo & Brand Identity Designer",
     "avatar": "/img/users/avatar-3.png",
     "points": {
@@ -38,6 +41,7 @@
   {
     "id": 4,
     "name": "graphicdesigner123",
+    "password": "qwertyuiop123",
     "about": "",
     "avatar": "/img/users/avatar-4.jpg",
     "points": {
@@ -50,6 +54,7 @@
   {
     "id": 5,
     "name": "pajeetkumar",
+    "password": "123456",
     "about": "",
     "avatar": "/img/users/default-avatar.svg",
     "points": {
@@ -62,6 +67,7 @@
   {
     "id": 6,
     "name": "WalterWhite",
+    "password": "1111",
     "about": "",
     "avatar": "/img/users/default-avatar.svg",
     "points": {
@@ -74,6 +80,7 @@
   {
     "id": 7,
     "name": "ann.",
+    "password": "football",
     "about": "",
     "avatar": "/img/users/avatar-7.jpg",
     "points": {
@@ -86,6 +93,7 @@
   {
     "id": 8,
     "name": "LoremIpsum22",
+    "password": "baseball",
     "about": "",
     "avatar": "/img/users/avatar-8.jpg",
     "points": {
@@ -98,6 +106,7 @@
   {
     "id": 9,
     "name": "John The Designer",
+    "password": "monkey",
     "about": "",
     "avatar": "/img/users/avatar-9.jpg",
     "points": {
@@ -110,6 +119,7 @@
   {
     "id": 10,
     "name": "johnDoe",
+    "password": "dragon",
     "about": "",
     "avatar": "/img/users/avatar-10.jpg",
     "points": {
@@ -122,6 +132,7 @@
   {
     "id": 11,
     "name": "Dennis Pasyuk",
+    "password": "696969",
     "about": "Brand Designer at unfold",
     "avatar": "/img/users/avatar-11.webp",
     "points": {
@@ -139,6 +150,7 @@
   {
     "id": 12,
     "name": "Aisha Ahya",
+    "password": "shadow",
     "about": "Hi, I'm drawing to design a better experience ✨ Visual explorer",
     "avatar": "/img/users/avatar-12.webp",
     "points": {
@@ -155,6 +167,7 @@
   {
     "id": 13,
     "name": "Joe Hansen",
+    "password": "asdfg",
     "about": "Art Director at MBB | Threadbare Goods",
     "avatar": "/img/users/avatar-13.webp",
     "points": {
@@ -170,6 +183,7 @@
   {
     "id": 14,
     "name": "Augusto Lopes",
+    "password": "qazwsx",
     "about": "Designer at Sketch. Having fun cycling around.",
     "avatar": "/img/users/avatar-14.webp",
     "points": {
@@ -184,6 +198,7 @@
   {
     "id": 15,
     "name": "DKNG",
+    "password": "dkng",
     "about": "Established in 2005, DKNG is a design studio based in Los Angeles, California with a focus on the music and entertainment industries.",
     "avatar": "/img/users/avatar-15.webp",
     "points": {
@@ -201,6 +216,7 @@
   {
     "id": 16,
     "name": "Ryan Pickard",
+    "password": "ryan111",
     "about": "Contact – ryanpckrd {at} gmail {dot} com",
     "avatar": "/img/users/avatar-16.webp",
     "points": {

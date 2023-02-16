@@ -3,8 +3,7 @@ import Logo from "./Logo";
 import Nav from "./Nav";
 import Button from "./Button";
 import styles from "../styles/Navbar.module.css";
-import SignInForm from "./SignInForm";
-import SignUpForm from "./SignUpForm";
+import AccountForm from "./AccountForm";
 import {useModal} from "../context/ModalContext";
 
 export default function Navbar() {
@@ -21,12 +20,12 @@ export default function Navbar() {
         <Button
           variant="light"
           text="Sign in"
-          onClick={() => setContent(<SignInForm />)}
+          onClick={() => setContent(<AccountForm register={false} />)}
         ></Button>
         <Button
           variant="primary"
           text="Sign up"
-          onClick={() => setContent(<SignUpForm />)}
+          onClick={() => setContent(<AccountForm register={true} />)}
         ></Button>
       </div>
     </header>

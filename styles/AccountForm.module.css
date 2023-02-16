@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.error {
+  color: var(--color-secondary);
+  padding: var(--button-v-padding) 0;
+}
+
+.redirection {
+  color: var(--color-primary-faded);
+  cursor: pointer;
+  margin-top: 2.5rem;
+}
+
+.redirection:hover {
+  color: var(--color-primary);
+}
