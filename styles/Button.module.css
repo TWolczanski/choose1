@@ -3,8 +3,8 @@
   font-size: var(--f-size-1);
   font-weight: var(--f-weight-2);
   font-family: 'Poppins', sans-serif;
-  line-height: var(--line-height);
-  padding: var(--button-v-padding) 1.5625rem;
+  line-height: var(--line-height-1);
+  padding: var(--button-v-padding) var(--button-h-padding);
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: border-radius 0.5s;
