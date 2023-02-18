@@ -1,30 +1,30 @@
 import {useEffect, useRef} from "react";
 import styles from "../styles/TextArea.module.css";
 
-export default function TextArea({empty, className, onInput, ...props}) {
+export default function TextArea({value, onInput, className, ...props}) {
   const ref = useRef(null);
-  const height = useRef(null);
 
-  useEffect(() => {
-    if (empty) {
-      ref.current.value = "";
-      ref.current.style.height = height.current;
-      ref.current.blur();
-    }
-  }, [empty]);
-
-  function handleInput(event) {
-    if (height.current === null) {
-      height.current = ref.current.clientHeight + "px";
-    }
-    ref.current.style.height = height.current;
+  function adjustHeight() {
+    ref.current.style.height = null;
     if (ref.current.clientHeight < ref.current.scrollHeight) {
       ref.current.style.height = ref.current.scrollHeight + "px";
     }
+  }
+
+  function handleInput(event) {
+    adjustHeight();
     if (onInput) {
       onInput(event);
     }
   }
+
+  useEffect(() => {
+    if (value !== null && value !== undefined) {
+      ref.current.blur();
+      ref.current.value = value;
+      adjustHeight();
+    }
+  }, [value]);
 
   return (
     <textarea

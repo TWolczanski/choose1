@@ -4,17 +4,17 @@ import TextArea from "./TextArea";
 import Button from "./Button";
 
 export default function TextAreaForm({name, submitText, onSubmit, className}) {
-  const [empty, setEmpty] = useState(true);
   const [focused, setFocused] = useState(false);
   const [btnVisible, setBtnVisible] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        setEmpty(true);
         setFocused(false);
         setBtnVisible(false);
+        setSubmitted(true);
         if (onSubmit) {
           onSubmit(event);
         }
@@ -24,24 +24,21 @@ export default function TextAreaForm({name, submitText, onSubmit, className}) {
       } ${className}`}
     >
       <TextArea
+        value={submitted ? "" : undefined}
         name={name}
         rows={3}
         placeholder="Write a comment..."
         spellCheck={false}
         className={styles.textarea}
-        onFocus={() => setFocused(true)}
+        onFocus={() => {
+          setFocused(true);
+          setSubmitted(false);
+        }}
         onBlur={() => setFocused(false)}
         onInput={(event) => {
-          if (event.target.value.length > 0) {
-            if (empty) {
-              setEmpty(false);
-            }
-            setBtnVisible(true);
-          } else {
-            setBtnVisible(false);
-          }
+          if (event.target.value.length > 0) setBtnVisible(true);
+          else setBtnVisible(false);
         }}
-        empty={empty}
       />
       {focused && (
         <Button

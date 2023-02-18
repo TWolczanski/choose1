@@ -1,11 +1,12 @@
-.textarea {
-  width: 100%;
-}
-
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form .textarea {
+  width: 100%;
+  padding: var(--v-padding-2) var(--h-padding-2);
 }
 
 .formFocused {
