@@ -1,14 +1,16 @@
-import {useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import styles from "../styles/Select.module.css";
 import Image from "next/image";
 
-export default function Select({options, selectedOption, onChange, className}) {
+export default function Select({options, initial, onChange, className}) {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(selectedOption);
+  const [selected, setSelected] = useState(initial);
   const ref = useRef(null);
 
-  useEffect(() => {
-    if (open) {
+  function handleClick() {
+    const newOpen = !open;
+    setOpen(newOpen);
+    if (newOpen) {
       document.addEventListener(
         "mousedown",
         (event) => {
@@ -19,18 +21,12 @@ export default function Select({options, selectedOption, onChange, className}) {
         {once: true}
       );
     }
-  }, [open]);
-
-  useEffect(() => {
-    if (onChange) {
-      onChange(selected);
-    }
-  }, [selected]);
+  }
 
   return (
     <div
-      className={`${styles.container} ${className}`}
-      onClick={() => setOpen(!open)}
+      className={`${styles.container} ${className || ""}`}
+      onClick={handleClick}
       ref={ref}
     >
       <span className={styles.select}>
@@ -44,6 +40,7 @@ export default function Select({options, selectedOption, onChange, className}) {
                   onClick={() => {
                     setSelected(option);
                     setOpen(false);
+                    if (onChange) onChange(option);
                   }}
                   className={option === selected ? styles.selected : ""}
                 >

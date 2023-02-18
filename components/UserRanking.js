@@ -54,7 +54,7 @@ export default function UserRanking({top}) {
     <div className={styles.container}>
       <Select
         options={timeframes}
-        selectedOption="All time"
+        initial="All time"
         onChange={(val) => setTimeframe(val)}
         className={styles.timeframe}
       />
