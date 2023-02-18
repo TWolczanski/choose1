@@ -16,13 +16,13 @@
   --gutter: 10.5vw;
   --size-1: 0.4375rem;
   --size-2: 2.1875rem;
-  --button-v-padding: 0.45rem;
-  --button-h-padding: 1.5625rem;
-  --comment-v-padding: 2.5rem;
-  --comment-h-padding: 3.5rem;
+  --v-padding-1: 0.45rem;
+  --h-padding-1: 1.5625rem;
+  --v-padding-2: 2.5rem;
+  --h-padding-2: 3.5rem;
   --line-height-1: 1.625rem;
   --line-height-2: 2.25rem;
-  --border-radius: calc(((var(--button-v-padding) * 2) + var(--line-height-1)) / 2);
+  --border-radius: calc(((var(--v-padding-1) * 2) + var(--line-height-1)) / 2);
 }
 
 * {
@@ -104,7 +104,7 @@ label {
 input {
   width: 35rem;
   max-width: 35rem;
-  padding: 0.45rem 1.5625rem;
+  padding: var(--v-padding-1) var(--h-padding-1);
   border: none;
   outline: none;
   -webkit-box-shadow: none;

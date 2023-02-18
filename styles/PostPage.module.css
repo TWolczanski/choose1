@@ -36,5 +36,5 @@
 }
 
 .noComments {
-  padding: 0 var(--comment-h-padding);
+  padding: 0 var(--h-padding-2);
 }

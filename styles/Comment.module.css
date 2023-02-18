@@ -5,19 +5,19 @@
 }
 
 .author {
-  padding: 0 var(--comment-h-padding);
+  padding: 0 var(--h-padding-2);
 }
 
 .source {
   align-self: flex-start;
-  padding: 0 var(--comment-h-padding);
+  padding: 0 var(--h-padding-2);
   margin-bottom: 1rem;
 }
 
 .body {
   background-color: var(--color-bg-light);
   border-radius: var(--border-radius);
-  padding: var(--comment-v-padding) var(--comment-h-padding);
+  padding: var(--v-padding-2) var(--h-padding-2);
 }
 
 .timestamp {
@@ -25,6 +25,6 @@
   line-height: var(--line-height-1);
   color: var(--color-primary-faded);
   align-self: flex-end;
-  padding: 0 var(--comment-h-padding);
+  padding: 0 var(--h-padding-2);
   margin-top: 1rem;
 }

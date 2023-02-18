@@ -4,7 +4,7 @@
   font-weight: var(--f-weight-2);
   font-family: 'Poppins', sans-serif;
   line-height: var(--line-height-1);
-  padding: var(--button-v-padding) var(--button-h-padding);
+  padding: var(--v-padding-1) var(--h-padding-1);
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: border-radius 0.5s;

@@ -10,8 +10,8 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% + 1.5625rem * 2);
-  height: calc(100% + 0.9rem);
+  width: calc(100% + 2 * var(--v-padding-1));
+  height: calc(100% + 2 * var(--h-padding-1));
 }
 
 .select {
@@ -45,7 +45,7 @@
   font-weight: var(--f-weight-2);
   background-color: var(--color-bg-light);
   color: var(--color-primary-faded);
-  padding: 0.45rem 1.5625rem;
+  padding: var(--v-padding-1) var(--h-padding-1);
 }
 
 .menu li:hover {
