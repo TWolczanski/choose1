@@ -16,7 +16,7 @@
   --gutter: 10.5vw;
   --size-1: 0.4375rem;
   --size-2: 2.1875rem;
-  --v-padding-1: 0.45rem;
+  --v-padding-1: 0.6rem;
   --h-padding-1: 1.5625rem;
   --v-padding-2: 2.5rem;
   --h-padding-2: 3.5rem;
@@ -54,6 +54,7 @@ span {
   font-family: 'Poppins', sans-serif;
   font-size: var(--f-size-1);
   font-weight: var(--f-weight-2);
+  line-height: var(--line-height-1);
   color: var(--color-primary);
 }
 
