@@ -12,6 +12,7 @@ export default function Post({
   results,
   choice,
   className,
+  onImageClick,
 }) {
   let post;
   switch (type) {
@@ -22,6 +23,7 @@ export default function Post({
           images={images}
           results={results}
           choice={choice}
+          onImageClick={onImageClick}
         />
       );
       break;
@@ -32,6 +34,7 @@ export default function Post({
           images={images}
           results={results}
           choice={choice}
+          onImageClick={onImageClick}
         />
       );
       break;
@@ -42,6 +45,7 @@ export default function Post({
           images={images}
           results={results}
           choice={choice}
+          onImageClick={onImageClick}
         />
       );
       break;
@@ -52,6 +56,7 @@ export default function Post({
           images={images}
           results={results}
           choice={choice}
+          onImageClick={onImageClick}
         />
       );
       break;
@@ -63,6 +68,7 @@ export default function Post({
           choice={choice}
           clickable
           roundedCorners
+          onImageClick={onImageClick}
         />
       );
       break;

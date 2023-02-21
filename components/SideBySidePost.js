@@ -10,6 +10,7 @@ export default function SideBySidePost({
   results,
   choice,
   className,
+  onImageClick,
 }) {
   const [chosen, setChosen] = useState(choice);
 
@@ -22,9 +23,8 @@ export default function SideBySidePost({
             ${!chosen ? postStyles.clickable : ""}
           `}
           onClick={() => {
-            if (!chosen) {
-              setChosen(1);
-            }
+            if (onImageClick) onImageClick(1);
+            else if (!chosen) setChosen(1);
           }}
         >
           <Image
@@ -46,9 +46,8 @@ export default function SideBySidePost({
             ${!chosen ? postStyles.clickable : ""}
           `}
           onClick={() => {
-            if (!chosen) {
-              setChosen(2);
-            }
+            if (onImageClick) onImageClick(2);
+            else if (!chosen) setChosen(2);
           }}
         >
           <Image
@@ -67,7 +66,9 @@ export default function SideBySidePost({
 
       <ResultsBar
         results={
-          chosen && results.map((r, i) => (i + 1 === chosen ? r + 1 : r))
+          results &&
+          chosen &&
+          results.map((r, i) => (i + 1 === chosen ? r + 1 : r))
         }
         highlighted={chosen}
       />

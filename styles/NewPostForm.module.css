@@ -10,12 +10,8 @@
   padding: var(--v-padding-1) 0;
 }
 
-.inputContainer {
+.container {
   width: 100%;
-}
-
-.inputContainer select {
-  display: none;
 }
 
 .textarea {
@@ -49,6 +45,6 @@
   margin-top: 1rem;
 }
 
-.typesRadio {
+.container input[type="file"] {
   display: none;
 }

@@ -13,6 +13,7 @@ export default function CarouselPost({
   clickable,
   roundedCorners,
   className,
+  onImageClick,
 }) {
   const [active, setActive] = useState(1);
   const [chosen, setChosen] = useState(choice);
@@ -26,8 +27,9 @@ export default function CarouselPost({
           ${roundedCorners ? postStyles.rounded : ""}
         `}
         onClick={() => {
-          if (!chosen) {
-            setChosen(active);
+          if (clickable) {
+            if (onImageClick) onImageClick(active);
+            else if (!chosen) setChosen(active);
           }
         }}
       >

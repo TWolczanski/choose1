@@ -10,6 +10,7 @@ export default function SliderPost({
   results,
   choice,
   className,
+  onImageClick,
 }) {
   const [chosen, setChosen] = useState(choice);
   const [sliding, setSliding] = useState(false);
@@ -47,9 +48,8 @@ export default function SliderPost({
             ${!chosen ? postStyles.clickable : ""}
           `}
           onClick={() => {
-            if (!chosen) {
-              setChosen(1);
-            }
+            if (onImageClick) onImageClick(1);
+            else if (!chosen) setChosen(1);
           }}
           ref={imageWrapper1}
         >
@@ -90,9 +90,8 @@ export default function SliderPost({
             ${!chosen ? postStyles.clickable : ""}
           `}
           onClick={() => {
-            if (!chosen) {
-              setChosen(2);
-            }
+            if (onImageClick) onImageClick(2);
+            else if (!chosen) setChosen(2);
           }}
           ref={imageWrapper2}
         >
