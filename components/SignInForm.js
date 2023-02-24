@@ -1,9 +1,11 @@
 import {useState} from "react";
 import styles from "../styles/AccountForm.module.css";
 import Button from "./Button";
+import {useUser} from "../context/UserContext";
 
-export default function SignInForm() {
+export default function SignInForm({onSubmit}) {
   const [error, setError] = useState();
+  const {setUser} = useUser();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -18,8 +20,10 @@ export default function SignInForm() {
       }),
     });
     const result = await response.json();
-    if (result.error) {
-      setError(result.error);
+    if (result.error) setError(result.error);
+    else {
+      setUser(result.user);
+      if (onSubmit) onSubmit();
     }
   }
 
