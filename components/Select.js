@@ -1,67 +1,43 @@
-import {useRef, useState} from "react";
+import {useState} from "react";
 import styles from "../styles/Select.module.css";
 import Image from "next/image";
+import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from "./Dropdown";
 
-export default function Select({options, initial, onChange, className}) {
-  const [open, setOpen] = useState(false);
+export default function Select({options, initial, onChange, ...props}) {
   const [selected, setSelected] = useState(initial);
-  const ref = useRef(null);
-
-  function handleClick() {
-    const newOpen = !open;
-    setOpen(newOpen);
-    if (newOpen) {
-      document.addEventListener(
-        "mousedown",
-        (event) => {
-          if (ref.current && !ref.current.contains(event.target)) {
-            setOpen(false);
-          }
-        },
-        {once: true}
-      );
-    }
-  }
+  const chevronUp = "/img/chevron-up.svg";
+  const chevronDown = "/img/chevron-down.svg";
+  const [icon, setIcon] = useState(chevronDown);
 
   return (
-    <div
-      className={`${styles.container} ${className || ""}`}
-      onClick={handleClick}
-      ref={ref}
+    <Dropdown
+      {...props}
+      onOpen={() => setIcon(chevronUp)}
+      onClose={() => setIcon(chevronDown)}
     >
-      <span className={styles.select}>
-        {selected}
-        {open && (
-          <ul className={styles.menu}>
-            {options &&
-              options.map((option, i) => (
-                <li
-                  key={i}
-                  onClick={() => {
-                    setSelected(option);
-                    setOpen(false);
-                    if (onChange) onChange(option);
-                  }}
-                  className={option === selected ? styles.selected : ""}
-                >
-                  {option}
-                </li>
-              ))}
-          </ul>
-        )}
-      </span>
-
-      <div className={styles.chevron}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={open ? "/img/chevron-up.svg" : "/img/chevron-down.svg"}
-            layout="fill"
-            objectFit="contain"
-          />
+      <DropdownToggle className={styles.toggle}>
+        <span>{selected}</span>
+        <div className={styles.chevron}>
+          <div className={styles.imageWrapper}>
+            <Image src={icon} layout="fill" objectFit="contain" />
+          </div>
         </div>
-      </div>
-
-      <div className={styles.clickableArea}></div>
-    </div>
+        <div className={styles.clickableArea}></div>
+      </DropdownToggle>
+      <DropdownMenu>
+        {options.map((option, i) => (
+          <DropdownItem
+            key={i}
+            onClick={() => {
+              setSelected(option);
+              if (onChange) onChange(option);
+            }}
+            className={option === selected ? styles.selected : ""}
+          >
+            {option}
+          </DropdownItem>
+        ))}
+      </DropdownMenu>
+    </Dropdown>
   );
 }
