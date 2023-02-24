@@ -6,6 +6,7 @@ import Comments from "../../components/Comments";
 import TextAreaForm from "../../components/TextAreaForm";
 import Paragraph from "../../components/Paragraph";
 import {useState} from "react";
+import {useUser} from "../../context/UserContext";
 
 export default function PostPage({
   title,
@@ -16,9 +17,9 @@ export default function PostPage({
   results,
   choice,
   comments,
-  user,
 }) {
   const [feedback, setFeedback] = useState(comments);
+  const {user} = useUser();
 
   return (
     <div className={styles.container}>
@@ -94,7 +95,6 @@ export async function getServerSideProps(context) {
       results: post.results,
       choice: post.choice || null,
       comments: comments || null,
-      user: users[3],
     },
   };
 }
