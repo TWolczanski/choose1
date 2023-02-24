@@ -58,6 +58,7 @@ export default function UserRanking({top}) {
         onChange={(val) => setTimeframe(val)}
         className={styles.timeframe}
       />
+      {topUsers && topUsers.length < 3 && <p>There are no users yet.</p>}
       {topUsers && topUsers.length >= 3 && (
         <Podium top1={topUsers[0]} top2={topUsers[1]} top3={topUsers[2]} />
       )}
