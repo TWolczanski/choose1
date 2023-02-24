@@ -4,7 +4,7 @@ export default function Logo({variant, className}) {
   return (
     <div className={`${styles.logo} ${className}`}>
       <div className={styles.symbol}>
-        {[...Array(4)].map((a, i) => (
+        {[1, 2, 3, 4].map((i) => (
           <div key={i} className={`${styles.circle} ${styles[variant]}`}></div>
         ))}
       </div>
