@@ -1,0 +1,28 @@
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  z-index: 998;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + var(--v-padding-1));
+  left: calc(-1 * var(--h-padding-1));
+  white-space: nowrap;
+  background-color: var(--color-bg-light);
+  padding: var(--v-padding-1) 0;
+}
+
+.item {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--f-size-1);
+  font-weight: var(--f-weight-2);
+  background-color: var(--color-bg-light);
+  color: var(--color-primary-faded);
+  padding: var(--v-padding-1) var(--h-padding-1);
+}
+
+.item:hover {
+  color: var(--color-primary);
+}
