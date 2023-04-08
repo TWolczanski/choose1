@@ -66,8 +66,8 @@
   },
   {
     "id": 6,
-    "name": "WalterWhite",
-    "password": "1111",
+    "name": "admin",
+    "password": "pass",
     "about": "",
     "avatar": "/img/users/default-avatar.svg",
     "points": {
