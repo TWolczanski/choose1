@@ -50,7 +50,7 @@ export default function UserPage({
         <Comments comments={comments} className={styles.comments} />
       ) : (
         <span className={styles.noComments}>
-          Looks like the user hasn't written any comments yet.
+          Looks like the user hasn&lsquo;t written any comments yet.
         </span>
       )}
     </div>

@@ -10,7 +10,7 @@ export default function Hero({postData}) {
         <h1>Help and get help with making design decisions.</h1>
         <p>
           Having trouble selecting the best logo concept or the proper color
-          scheme in your UI project? Or maybe you can’t decide on the camera
+          scheme in your UI project? Or maybe you can&lsquo;t decide on the camera
           angle in your 3D render? Post your work and see what others have to
           say about it.
         </p>

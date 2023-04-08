@@ -24,7 +24,7 @@ export default function AccountForm({register, onSubmit}) {
             className={styles.redirection}
             onClick={() => setRegistration(true)}
           >
-            Don't have an account? Sign up
+            Don&lsquo;t have an account? Sign up
           </span>
         </>
       )}

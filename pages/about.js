@@ -1,5 +1,4 @@
 import styles from "../styles/AboutPage.module.css";
-import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -8,12 +7,12 @@ export default function AboutPage() {
         <h1 className="header">About</h1>
         <p>
           Every graphic designer knows how hard it can be to choose the best
-          design out of the ton they’ve prepared. If you specialize in branding,
+          design out of the ton they&lsquo;ve prepared. If you specialize in branding,
           you probably spend a lot of time on deciding which logo would catch
           the eye of the greatest number of people and which therefore should be
           presented to the client. Similarly, UI/UX designers often rack their
           brains over things like color, fonts and spacing. No matter what
-          you’re working on, it’s valuable to hear other people’s opinions, even
+          you&lsquo;re working on, it&lsquo;s valuable to hear other people&lsquo;s opinions, even
           on small details. choose1 is a place where graphic designers help each
           other in making decisions regarding their current work. The website
           was designed to be as simple as possible: users create posts
@@ -45,7 +44,7 @@ export default function AboutPage() {
                 Points can be spent on creating new posts. To add a new post,
                 upload your designs, specify a title, and provide a description
                 that will give other users some context and help them understand
-                what you’re puzzling over. Make sure to use the appropriate post
+                what you&lsquo;re puzzling over. Make sure to use the appropriate post
                 type too.
               </p>
             </div>
