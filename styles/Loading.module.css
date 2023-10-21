@@ -1,0 +1,85 @@
+.loading {
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+}
+
+.circle {
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--color-primary);
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.circle:nth-child(1) {
+  top: 0;
+  left: 0;
+  animation-name: highlight-1;
+}
+
+.circle:nth-child(2) {
+  top: 0;
+  left: 50%;
+  animation-name: highlight-2;
+  background-color: var(--color-secondary);
+}
+
+.circle:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  animation-name: highlight-3;
+}
+
+.circle:nth-child(4) {
+  top: 50%;
+  left: 0;
+  animation-name: highlight-4;
+}
+
+@keyframes highlight-2 {
+  25% {
+    background-color: var(--color-primary);
+  }
+
+  75% {
+    background-color: var(--color-primary);
+  }
+}
+
+@keyframes highlight-3 {
+  25% {
+    background-color: var(--color-secondary);
+  }
+
+  50% {
+    background-color: var(--color-primary);
+  }
+}
+
+@keyframes highlight-4 {
+  25% {
+    background-color: var(--color-primary);
+  }
+
+  50% {
+    background-color: var(--color-secondary);
+  }
+
+  75% {
+    background-color: var(--color-primary);
+  }
+}
+
+@keyframes highlight-1 {
+  50% {
+    background-color: var(--color-primary);
+  }
+
+  75% {
+    background-color: var(--color-secondary);
+  }
+}
