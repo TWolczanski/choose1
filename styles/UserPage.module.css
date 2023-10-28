@@ -42,9 +42,3 @@
   max-width: 750px;
   margin-top: 2.5rem;
 }
-
-.noComments {
-  font-weight: var(--f-weight-1);
-  color: var(--color-primary-faded);
-  margin-top: 2.5rem;
-}

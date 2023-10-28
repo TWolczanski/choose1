@@ -1,4 +1,19 @@
 .comments {
   display: flex;
   flex-direction: column;
+  gap: 2.5rem;
+}
+
+.comments ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentForm {
+  flex: 1;
+}
+
+.info {
+  padding: 0 var(--h-padding-2);
+  text-align: center;
 }

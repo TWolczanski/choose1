@@ -24,17 +24,3 @@
   flex-direction: column;
   gap: 2.5rem;
 }
-
-.feedback {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.commentForm {
-  flex: 1;
-}
-
-.noComments {
-  padding: 0 var(--h-padding-2);
-}

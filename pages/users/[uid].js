@@ -7,15 +7,7 @@ import Image from "next/image";
 import Posts from "../../components/Posts";
 import Comments from "../../components/Comments";
 
-export default function UserPage({
-  id,
-  name,
-  about,
-  avatar,
-  points,
-  links,
-  comments,
-}) {
+export default function UserPage({id, name, about, avatar, points, links}) {
   return (
     <div className={styles.container}>
       <Avatar img={avatar} size="big" className={styles.avatar} />
@@ -44,15 +36,9 @@ export default function UserPage({
         </ul>
       )}
       <h1 className="header">Recent posts</h1>
-      <Posts author={id} />
+      <Posts authorId={id} />
       <h1 className="header">Recent comments</h1>
-      {comments.length > 0 ? (
-        <Comments comments={comments} className={styles.comments} />
-      ) : (
-        <span className={styles.noComments}>
-          Looks like the user hasn&lsquo;t written any comments yet.
-        </span>
-      )}
+      <Comments authorId={id} className={styles.comments} />
     </div>
   );
 }
@@ -67,18 +53,6 @@ export async function getServerSideProps(context) {
       notFound: true,
     };
   }
-  const pres = await fetch(`${server}/data/posts.json`);
-  const posts = await pres.json();
-
-  const comments =
-    posts &&
-    posts
-      .map((p) =>
-        (p.comments || [])
-          .filter((c) => c.authorId === uid)
-          .map((c) => ({source: p, body: c.body, timestamp: c.timestamp}))
-      )
-      .flat();
 
   return {
     props: {
@@ -103,7 +77,6 @@ export async function getServerSideProps(context) {
           ? "https://dribbble.com/" + user.dribbble
           : null,
       },
-      comments: comments || null,
     },
   };
 }

@@ -3,12 +3,10 @@ import Post from "../../components/Post";
 import styles from "../../styles/PostPage.module.css";
 import Author from "../../components/Author";
 import Comments from "../../components/Comments";
-import TextAreaForm from "../../components/TextAreaForm";
 import Paragraph from "../../components/Paragraph";
-import {useState} from "react";
-import {useUser} from "../../context/UserContext";
 
 export default function PostPage({
+  id,
   title,
   author,
   description,
@@ -16,11 +14,7 @@ export default function PostPage({
   images,
   results,
   choice,
-  comments,
 }) {
-  const [feedback, setFeedback] = useState(comments);
-  const {user} = useUser();
-
   return (
     <div className={styles.container}>
       <Post
@@ -36,28 +30,7 @@ export default function PostPage({
           <Author id={author.id} name={author.name} avatar={author.avatar} />
           {description && <Paragraph text={description} />}
         </div>
-        <div className={styles.feedback}>
-          {user && (
-            <TextAreaForm
-              name="comment"
-              onSubmit={(event) => {
-                const body = event.target.comment.value;
-                const author = user;
-                const timestamp = new Date().toISOString();
-                const comment = {author, body, timestamp};
-                setFeedback([comment, ...(feedback || [])]);
-              }}
-              className={styles.commentForm}
-            />
-          )}
-          {feedback ? (
-            <Comments comments={feedback} />
-          ) : (
-            <p className={styles.noComments}>
-              Looks like there are no comments yet.
-            </p>
-          )}
-        </div>
+        <Comments postId={id} />
       </div>
     </div>
   );
@@ -75,18 +48,11 @@ export async function getServerSideProps(context) {
   }
   const ures = await fetch(`${server}/data/users.json`);
   const users = await ures.json();
-
   const author = users.find((u) => u.id === post.authorId);
-  const comments =
-    post.comments &&
-    post.comments.map((c) => ({
-      author: users.find((u) => u.id === c.authorId),
-      body: c.body,
-      timestamp: c.timestamp,
-    }));
 
   return {
     props: {
+      id: post.id,
       title: post.title,
       author: author,
       description: post.description || null,
@@ -94,7 +60,6 @@ export async function getServerSideProps(context) {
       images: post.images,
       results: post.results,
       choice: post.choice || null,
-      comments: comments || null,
     },
   };
 }
