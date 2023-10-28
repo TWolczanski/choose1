@@ -3,7 +3,7 @@ import Button from "./Button";
 import Post from "./Post";
 import styles from "../styles/Posts.module.css";
 
-export default function Posts({author}) {
+export default function Posts({authorId}) {
   const categories = [
     "All",
     "Branding",
@@ -20,12 +20,12 @@ export default function Posts({author}) {
   useEffect(() => {
     const fetchPosts = async () => {
       const data = await fetch("/data/posts.json");
-      const posts = await data.json();
+      const allPosts = await data.json();
       setPosts(
-        posts.filter(
+        allPosts.filter(
           (p) =>
             (p.category === category || category === "All") &&
-            (p.authorId === author || !author)
+            (p.authorId === authorId || !authorId)
         )
       );
     };
