@@ -6,9 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Link href="/">
-        <a>
-          <Logo variant="light" />
-        </a>
+        <Logo variant="light" />
       </Link>
       <span className={styles.copyright}>&copy; 2022 Tomasz Wołczański</span>
     </footer>

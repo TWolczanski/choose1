@@ -67,15 +67,11 @@ export default function UserRanking({top}) {
           {topUsers.slice(3).map((u, i) => (
             <li key={u.id}>
               <Link href={`/users/${u.id}`}>
-                <a>
-                  <Avatar img={u.avatar} size="big" className={styles.avatar} />
-                </a>
+                <Avatar img={u.avatar} size="big" className={styles.avatar} />
               </Link>
               <div className={styles.data}>
                 <Link href={`/users/${u.id}`}>
-                  <a>
-                    <h2>{u.name}</h2>
-                  </a>
+                  <h2>{u.name}</h2>
                 </Link>
                 <Points amount={u.points} />
               </div>

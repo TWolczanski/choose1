@@ -19,10 +19,8 @@ export default function Navbar() {
   const router = useRouter();
   return (
     <header className={styles.navbar}>
-      <Link href="/">
-        <a className={styles.logo}>
-          <Logo variant="dark" />
-        </a>
+      <Link href="/" className={styles.logo}>
+        <Logo variant="dark" />
       </Link>
       <Nav className={styles.nav} />
       {user ? (

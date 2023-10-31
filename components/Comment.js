@@ -14,8 +14,8 @@ export default function Comment({author, source, body, timestamp}) {
           className={styles.author}
         />
       ) : (
-        <Link href={`/posts/${source.id}`}>
-          <a className={styles.source}>{source.title}</a>
+        <Link href={`/posts/${source.id}`} className={styles.source}>
+          {source.title}
         </Link>
       )}
       <Paragraph text={body} className={styles.body} />

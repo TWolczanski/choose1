@@ -18,13 +18,12 @@ export default function Nav(props) {
                 hovered === p ? styles.hovered : styles.notHovered
               } ${router.pathname === "/" + p ? styles.active : ""}`}
             ></div>
-            <Link href={"/" + p}>
-              <a
-                onMouseEnter={() => setHovered(p)}
-                onMouseLeave={() => setHovered(null)}
-              >
-                {p}
-              </a>
+            <Link
+              href={"/" + p}
+              onMouseEnter={() => setHovered(p)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {p}
             </Link>
           </li>
         ))}

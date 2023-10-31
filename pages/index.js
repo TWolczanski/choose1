@@ -12,17 +12,13 @@ export default function HomePage({heroPostData}) {
       <Hero postData={heroPostData} />
       <h1 className="header">Recent posts</h1>
       <Posts />
-      <Link href="/posts">
-        <a className={styles.viewMore}>
-          <Button variant="secondary" text="View more" />
-        </a>
+      <Link href="/posts" className={styles.viewMore}>
+        <Button variant="secondary" text="View more" />
       </Link>
       <h1 className="header">Top users</h1>
       <UserRanking top={3} />
-      <Link href="/users">
-        <a className={styles.viewMore}>
-          <Button variant="secondary" text="View more" />
-        </a>
+      <Link href="/users" className={styles.viewMore}>
+        <Button variant="secondary" text="View more" />
       </Link>
     </>
   );
