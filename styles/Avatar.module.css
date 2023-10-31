@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.image {
+  object-fit: cover;
+}
+
 .small {
   width: 3rem;
   height: 3rem;

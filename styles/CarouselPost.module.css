@@ -4,3 +4,7 @@
   background-color: var(--color-bg-light);
   overflow: hidden;
 }
+
+.image {
+  object-fit: contain;
+}

@@ -9,7 +9,12 @@ export default function Avatar({img, size, className, ...props}) {
         className ? className : ""
       }`}
     >
-      <Image src={img} alt="user's avatar" layout="fill" objectFit="cover" />
+      <Image
+        src={img}
+        alt="user's avatar"
+        fill={true}
+        className={styles.image}
+      />
     </div>
   );
 }

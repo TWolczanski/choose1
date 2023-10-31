@@ -55,10 +55,9 @@ export default function SliderPost({
         >
           <Image
             src={images[0]}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="0% 0%"
-            priority={true}
+            alt="post image 1"
+            fill={true}
+            className={styles.image1}
           />
           <div
             className={`${postStyles.overlay} ${
@@ -97,10 +96,9 @@ export default function SliderPost({
         >
           <Image
             src={images[1]}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="100% 100%"
-            priority={true}
+            alt="post image 2"
+            fill={true}
+            className={styles.image2}
           />
           <div
             className={`${postStyles.overlay} ${

@@ -13,13 +13,14 @@
 }
 
 .chevron {
-  margin-left: 0.6rem;
-}
-
-.chevron .imageWrapper {
   position: relative;
   width: 0.75rem;
   height: 0.75rem;
+  margin-left: 0.6rem;
+}
+
+.chevron .icon {
+  object-fit: contain;
 }
 
 .selected {

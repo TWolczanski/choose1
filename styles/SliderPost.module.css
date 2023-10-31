@@ -12,6 +12,16 @@
   background-color: var(--color-bg-light);
 }
 
+.image1 {
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+.image2 {
+  object-fit: cover;
+  object-position: 100% 100%;
+}
+
 .horizontal {
   flex-direction: column;
 }

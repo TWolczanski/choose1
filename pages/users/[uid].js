@@ -21,12 +21,12 @@ export default function UserPage({id, name, about, avatar, points, links}) {
               link && (
                 <li key={website}>
                   <a href={link}>
-                    <div className={styles.icon}>
+                    <div className={styles.iconWrapper}>
                       <Image
                         src={"/img/" + website + "-icon.svg"}
                         alt="website icon"
-                        layout="fill"
-                        objectFit="contain"
+                        fill={true}
+                        className={styles.icon}
                       />
                     </div>
                   </a>

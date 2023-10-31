@@ -29,9 +29,9 @@ export default function SideBySidePost({
         >
           <Image
             src={images[0]}
-            layout="fill"
-            objectFit="contain"
-            priority={true}
+            alt="post image 1"
+            fill={true}
+            className={styles.image}
           />
           <div
             className={`${postStyles.overlay} ${
@@ -52,9 +52,9 @@ export default function SideBySidePost({
         >
           <Image
             src={images[1]}
-            layout="fill"
-            objectFit="contain"
-            priority={true}
+            alt="post image 2"
+            fill={true}
+            className={styles.image}
           />
           <div
             className={`${postStyles.overlay} ${

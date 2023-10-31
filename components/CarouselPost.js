@@ -35,9 +35,9 @@ export default function CarouselPost({
       >
         <Image
           src={images[active - 1]}
-          layout="fill"
-          objectFit="contain"
-          priority={true}
+          alt="post image"
+          fill={true}
+          className={styles.image}
         />
         {clickable && (
           <div

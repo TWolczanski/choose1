@@ -31,10 +31,14 @@
   margin-top: 2.5rem;
 }
 
-.icon {
+.iconWrapper {
   position: relative;
   width: 3rem;
   height: 3rem;
+}
+
+.icon {
+  object-fit: contain;
 }
 
 .comments {

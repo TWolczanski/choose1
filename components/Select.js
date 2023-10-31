@@ -18,9 +18,12 @@ export default function Select({options, initial, onChange, ...props}) {
       <DropdownToggle className={styles.toggle}>
         <span>{selected}</span>
         <div className={styles.chevron}>
-          <div className={styles.imageWrapper}>
-            <Image src={icon} layout="fill" objectFit="contain" />
-          </div>
+          <Image
+            src={icon}
+            alt="chevron icon"
+            fill={true}
+            className={styles.icon}
+          />
         </div>
         <div className={styles.clickableArea}></div>
       </DropdownToggle>
