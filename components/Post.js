@@ -1,8 +1,8 @@
 import Link from "next/link";
-import CarouselPost from "./CarouselPost";
-import SideBySidePost from "./SideBySidePost";
-import SliderPost from "./SliderPost";
-import styles from "../styles/Post.module.css";
+import CarouselPost from "components/CarouselPost";
+import SideBySidePost from "components/SideBySidePost";
+import SliderPost from "components/SliderPost";
+import styles from "styles/Post.module.css";
 
 export default function Post({
   id,

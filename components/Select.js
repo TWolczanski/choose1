@@ -1,7 +1,12 @@
 import {useState} from "react";
-import styles from "../styles/Select.module.css";
+import styles from "styles/Select.module.css";
 import Image from "next/image";
-import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from "./Dropdown";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "components/Dropdown";
 
 export default function Select({options, initial, onChange, ...props}) {
   const [selected, setSelected] = useState(initial);

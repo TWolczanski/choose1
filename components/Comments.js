@@ -1,8 +1,10 @@
-import Comment from "./Comment";
-import TextAreaForm from "./TextAreaForm";
-import styles from "../styles/Comments.module.css";
+"use client";
+
+import Comment from "components/Comment";
+import TextAreaForm from "components/TextAreaForm";
+import styles from "styles/Comments.module.css";
 import {useEffect, useState} from "react";
-import {useUser} from "../context/UserContext";
+import {useUser} from "context/UserContext";
 
 export default function Comments({postId, authorId, className, ...props}) {
   const [comments, setComments] = useState();

@@ -1,6 +1,6 @@
-import styles from "../styles/Podium.module.css";
-import Points from "./Points";
-import Avatar from "./Avatar";
+import styles from "styles/Podium.module.css";
+import Points from "components/Points";
+import Avatar from "components/Avatar";
 import Link from "next/link";
 
 export default function Podium({top1, top2, top3}) {

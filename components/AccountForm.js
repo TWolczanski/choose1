@@ -1,7 +1,7 @@
 import {useState} from "react";
-import styles from "../styles/AccountForm.module.css";
-import SignInForm from "./SignInForm";
-import SignUpForm from "./SignUpForm";
+import styles from "styles/AccountForm.module.css";
+import SignInForm from "components/SignInForm";
+import SignUpForm from "components/SignUpForm";
 
 export default function AccountForm({register, onSubmit}) {
   const [registration, setRegistration] = useState(register);

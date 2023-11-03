@@ -1,7 +1,7 @@
 import {useState} from "react";
-import styles from "../styles/AccountForm.module.css";
-import Button from "./Button";
-import {useUser} from "../context/UserContext";
+import styles from "styles/AccountForm.module.css";
+import Button from "components/Button";
+import {useUser} from "context/UserContext";
 
 export default function SignInForm({onSubmit}) {
   const [error, setError] = useState();

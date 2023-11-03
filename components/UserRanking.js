@@ -1,10 +1,12 @@
+"use client";
+
 import {useEffect, useState} from "react";
-import Podium from "./Podium";
-import Select from "./Select";
-import Points from "./Points";
-import Avatar from "./Avatar";
+import Podium from "components/Podium";
+import Select from "components/Select";
+import Points from "components/Points";
+import Avatar from "components/Avatar";
 import Link from "next/link";
-import styles from "../styles/UserRanking.module.css";
+import styles from "styles/UserRanking.module.css";
 
 export default function UserRanking({top}) {
   const timeframes = ["All time", "Past year", "Past month", "Past week"];

@@ -1,8 +1,10 @@
+"use client";
+
 import {useState} from "react";
-import ResultsBar from "./ResultsBar";
+import ResultsBar from "components/ResultsBar";
 import Image from "next/image";
-import styles from "../styles/SideBySidePost.module.css";
-import postStyles from "../styles/Post.module.css";
+import styles from "styles/SideBySidePost.module.css";
+import postStyles from "styles/Post.module.css";
 
 export default function SideBySidePost({
   orientation,

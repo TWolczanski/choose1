@@ -1,6 +1,6 @@
-import styles from "../styles/Logo.module.css";
+import styles from "styles/Logo.module.css";
 
-export default function Logo({variant, className}) {
+export default function Logo({variant = "dark", className}) {
   return (
     <div className={`${styles.logo} ${className}`}>
       <div className={styles.symbol}>
@@ -14,7 +14,3 @@ export default function Logo({variant, className}) {
     </div>
   );
 }
-
-Logo.defaultProps = {
-  variant: "dark",
-};

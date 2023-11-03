@@ -1,5 +1,5 @@
 import {useEffect, useRef} from "react";
-import styles from "../styles/TextArea.module.css";
+import styles from "styles/TextArea.module.css";
 
 export default function TextArea({value, onInput, className, ...props}) {
   const ref = useRef(null);

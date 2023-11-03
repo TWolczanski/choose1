@@ -1,6 +1,6 @@
 import {useEffect} from "react";
-import styles from "../styles/Modal.module.css";
-import Backdrop from "./Backdrop";
+import styles from "styles/Modal.module.css";
+import Backdrop from "components/Backdrop";
 
 export default function Modal({open, close, children}) {
   useEffect(() => {

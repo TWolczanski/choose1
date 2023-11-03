@@ -1,9 +1,9 @@
-import styles from "../styles/Hero.module.css";
-import Button from "./Button";
+import styles from "styles/Hero.module.css";
+import Button from "components/Button";
 import Link from "next/link";
-import CarouselPost from "./CarouselPost";
+import CarouselPost from "components/CarouselPost";
 
-export default function Hero({postData}) {
+export default function Hero({examplePost}) {
   return (
     <section className={styles.hero}>
       <div className={styles.main}>
@@ -19,8 +19,8 @@ export default function Hero({postData}) {
         </Link>
       </div>
       <CarouselPost
-        images={postData.images}
-        results={postData.results}
+        images={examplePost.images}
+        results={examplePost.results}
         animation
         showPercentage
         className={styles.post}

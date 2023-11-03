@@ -1,9 +1,14 @@
 import {useState} from "react";
-import styles from "../styles/TextAreaForm.module.css";
-import TextArea from "./TextArea";
-import Button from "./Button";
+import styles from "styles/TextAreaForm.module.css";
+import TextArea from "components/TextArea";
+import Button from "components/Button";
 
-export default function TextAreaForm({name, submitText, onSubmit, className}) {
+export default function TextAreaForm({
+  name,
+  submitText = "Submit",
+  onSubmit,
+  className,
+}) {
   const [focused, setFocused] = useState(false);
   const [btnVisible, setBtnVisible] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -51,7 +56,3 @@ export default function TextAreaForm({name, submitText, onSubmit, className}) {
     </form>
   );
 }
-
-TextAreaForm.defaultProps = {
-  submitText: "Submit",
-};

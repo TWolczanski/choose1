@@ -1,5 +1,5 @@
-import styles from "../styles/WebsiteInfo.module.css";
-import Paragraph from "./Paragraph";
+import styles from "styles/WebsiteInfo.module.css";
+import Paragraph from "components/Paragraph";
 
 export default function WebsiteInfo() {
   const info =

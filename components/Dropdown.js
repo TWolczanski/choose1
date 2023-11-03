@@ -1,5 +1,5 @@
 import {useRef, useState, createContext, useContext} from "react";
-import styles from "../styles/Dropdown.module.css";
+import styles from "styles/Dropdown.module.css";
 
 const DropdownContext = createContext();
 

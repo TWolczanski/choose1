@@ -1,11 +1,11 @@
 import {useState, useRef} from "react";
-import Button from "./Button";
-import TextArea from "./TextArea";
-import Select from "./Select";
-import PostTypeIcon from "./PostTypeIcon";
-import Post from "./Post";
-import Points from "./Points";
-import styles from "../styles/NewPostForm.module.css";
+import Button from "components/Button";
+import TextArea from "components/TextArea";
+import Select from "components/Select";
+import PostTypeIcon from "components/PostTypeIcon";
+import Post from "components/Post";
+import Points from "components/Points";
+import styles from "styles/NewPostForm.module.css";
 
 export default function NewPostForm() {
   const categories = [

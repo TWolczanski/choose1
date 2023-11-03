@@ -1,6 +1,6 @@
 import {useState} from "react";
-import styles from "../styles/AccountForm.module.css";
-import Button from "./Button";
+import styles from "styles/AccountForm.module.css";
+import Button from "components/Button";
 
 export default function SignUpForm({onSubmit}) {
   const [error, setError] = useState();

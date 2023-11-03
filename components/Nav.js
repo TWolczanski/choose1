@@ -1,12 +1,12 @@
 import Link from "next/link";
-import {useRouter} from "next/router";
 import {useState} from "react";
-import styles from "../styles/Nav.module.css";
+import styles from "styles/Nav.module.css";
+import {usePathname} from "next/navigation";
 
 export default function Nav(props) {
   const pages = ["about", "posts", "users"];
   const [hovered, setHovered] = useState(null);
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <nav {...props}>
@@ -16,7 +16,7 @@ export default function Nav(props) {
             <div
               className={`${styles.bullet} ${
                 hovered === p ? styles.hovered : styles.notHovered
-              } ${router.pathname === "/" + p ? styles.active : ""}`}
+              } ${pathname === "/" + p ? styles.active : ""}`}
             ></div>
             <Link
               href={"/" + p}

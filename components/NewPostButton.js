@@ -1,6 +1,6 @@
-import styles from "../styles/NewPostButton.module.css";
-import {useModal} from "../context/ModalContext";
-import NewPostForm from "./NewPostForm";
+import styles from "styles/NewPostButton.module.css";
+import {useModal} from "context/ModalContext";
+import NewPostForm from "components/NewPostForm";
 
 export default function NewPostButton({className, ...props}) {
   const {setContent} = useModal();

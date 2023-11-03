@@ -1,6 +1,6 @@
-import styles from "../styles/Author.module.css";
+import styles from "styles/Author.module.css";
 import Link from "next/link";
-import Avatar from "./Avatar";
+import Avatar from "components/Avatar";
 
 export default function Author({id, name, avatar, className}) {
   return (

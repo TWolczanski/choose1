@@ -1,4 +1,4 @@
-import styles from "../styles/Points.module.css";
+import styles from "styles/Points.module.css";
 import Image from "next/image";
 
 export default function Points({amount, className}) {

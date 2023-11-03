@@ -1,6 +1,6 @@
-import styles from "../styles/Comment.module.css";
-import Author from "./Author";
-import Paragraph from "./Paragraph";
+import styles from "styles/Comment.module.css";
+import Author from "components/Author";
+import Paragraph from "components/Paragraph";
 import Link from "next/link";
 
 export default function Comment({author, source, body, timestamp}) {

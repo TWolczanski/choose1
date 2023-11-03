@@ -1,6 +1,6 @@
-import styles from "../styles/AboutPage.module.css";
+import styles from "styles/AboutPage.module.css";
 
-export default function AboutPage() {
+export default function Page() {
   return (
     <>
       <section className={styles.about}>

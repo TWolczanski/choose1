@@ -1,4 +1,4 @@
-import styles from "../styles/Avatar.module.css";
+import styles from "styles/Avatar.module.css";
 import Image from "next/image";
 
 export default function Avatar({img, size, className, ...props}) {

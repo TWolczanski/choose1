@@ -1,7 +1,9 @@
+"use client";
+
 import {useEffect, useState} from "react";
-import Button from "./Button";
-import Post from "./Post";
-import styles from "../styles/Posts.module.css";
+import Button from "components/Button";
+import Post from "components/Post";
+import styles from "styles/Posts.module.css";
 
 export default function Posts({authorId}) {
   const categories = [
