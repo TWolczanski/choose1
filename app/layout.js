@@ -13,9 +13,8 @@ export default function RootLayout({children, modal}) {
       <body>
         <UserProvider>
           <ModalProvider>
-            <Layout postModal={modal}>
-              {children}
-            </Layout>
+            <Layout>{children}</Layout>
+            {modal}
           </ModalProvider>
         </UserProvider>
       </body>

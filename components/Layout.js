@@ -6,28 +6,18 @@ import styles from "styles/Layout.module.css";
 import {useModal} from "context/ModalContext";
 import {useEffect} from "react";
 import WebsiteInfo from "components/WebsiteInfo";
-import {usePathname} from "next/navigation";
 
-export default function Layout({children, postModal}) {
-  const {open, setContent} = useModal();
-  const pathname = usePathname();
-  const showPostModal = pathname.startsWith("/posts/");
+export default function Layout({children}) {
+  const {setContent} = useModal();
 
   useEffect(() => {
     setContent(<WebsiteInfo />);
   }, []);
 
   return (
-    <div
-      className={`${styles.container} ${
-        open || showPostModal ? styles.modalOpen : ""
-      }`}
-    >
+    <div className={styles.container}>
       <Navbar />
-      <div className={styles.content}>
-        {children}
-        {showPostModal && postModal}
-      </div>
+      <div className={styles.content}>{children}</div>
       <Footer />
     </div>
   );
