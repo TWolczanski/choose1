@@ -24,3 +24,9 @@
   flex-direction: column;
   gap: 2.5rem;
 }
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem calc(var(--gutter) - var(--size-2));
+}
