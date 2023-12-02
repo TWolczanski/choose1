@@ -17,19 +17,19 @@ export default function SignUpForm({onSubmit}) {
       className={styles.form}
     >
       <h1>Sign up</h1>
-      <div>
+      <div className={styles.field}>
         <label htmlFor="username">Username</label>
         <input type="text" name="username" />
       </div>
-      <div>
+      <div className={styles.field}>
         <label htmlFor="email">E-mail</label>
         <input type="email" name="email" />
       </div>
-      <div>
+      <div className={styles.field}>
         <label htmlFor="password">Password</label>
         <input type="password" name="password" />
       </div>
-      <div>
+      <div className={styles.field}>
         <label htmlFor="confirm">Confirm password</label>
         <input type="password" name="confirm" />
       </div>

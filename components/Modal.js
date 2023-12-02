@@ -18,17 +18,15 @@ export default function Modal({open, close, children}) {
   }, [open]);
 
   return (
-    <>
-      {open && (
-        <Backdrop onClick={close}>
-          <div
-            className={styles.modal}
-            onClick={(event) => event.stopPropagation()}
-          >
-            {children}
-          </div>
-        </Backdrop>
-      )}
-    </>
+    open && (
+      <Backdrop onClick={close}>
+        <div
+          className={styles.modal}
+          onClick={(event) => event.stopPropagation()}
+        >
+          {children}
+        </div>
+      </Backdrop>
+    )
   );
 }

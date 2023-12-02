@@ -4,13 +4,13 @@
   /* word-break: break-all; */
 }
 
-.author {
+.author,
+.source {
   padding: 0 var(--h-padding-2);
 }
 
 .source {
   align-self: flex-start;
-  padding: 0 var(--h-padding-2);
   margin-bottom: 1rem;
 }
 
@@ -27,4 +27,18 @@
   align-self: flex-end;
   padding: 0 var(--h-padding-2);
   margin-top: 1rem;
+}
+
+@media (max-width: 450px) {
+  .body {
+    padding: var(--v-padding-2) var(--gutter);
+    margin: 0 calc(0px - var(--gutter));
+    border-radius: 0;
+  }
+
+  .author,
+  .source,
+  .timestamp {
+    padding: 0;
+  }
 }

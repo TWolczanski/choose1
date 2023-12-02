@@ -13,9 +13,12 @@
   --f-weight-2: 500;
   --f-weight-3: 600;
   --max-width: 1920px;
-  --gutter: 10.5vw;
+  /* --gutter: 10.5vw; */
+  --gutter: clamp(1.4rem, -0.84rem + 11.2vw, 12.6rem);
   --size-1: 0.4375rem;
-  --size-2: 2.1875rem;
+  --size-2: min(2.1875rem, 4vw);
+  --size-3: clamp(2rem, 6vw, 2.5rem);
+  --size-4: clamp(3.25rem, 10vw, 7.5rem);
   --v-padding-1: 0.6rem;
   --h-padding-1: 1.5625rem;
   --v-padding-2: 2.5rem;
@@ -25,10 +28,20 @@
   --border-radius: calc(((var(--v-padding-1) * 2) + var(--line-height-1)) / 2);
 }
 
+/* @media (max-width: 1000px) {
+  :root {
+    --gutter: 7vw;
+  }
+} */
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: clamp(81.25%, 2vw, 100%);
 }
 
 ::selection {
@@ -103,8 +116,6 @@ label {
 }
 
 input {
-  width: 35rem;
-  max-width: 35rem;
   padding: var(--v-padding-1) var(--h-padding-1);
   border: none;
   outline: none;
@@ -133,5 +144,5 @@ input[type="password"]:focus {
 
 .header {
   align-self: center;
-  margin-top: 7.5rem;
+  margin-top: var(--size-4);
 }

@@ -18,9 +18,50 @@
 .hero .main p {
   font-weight: var(--f-weight-2);
   color: var(--color-bg-light);
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--size-3);
 }
 
 .hero .post {
   padding-right: var(--gutter);
+}
+
+@media (max-width: 1350px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .main {
+    width: 100%;
+    padding: var(--size-4) var(--gutter);
+    /* padding-bottom: calc(1.3 * var(--size-4)); */
+    /* padding: 7.5rem var(--gutter); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .main p {
+    max-width: 50rem;
+  }
+
+  .hero .post {
+    width: 50%;
+    padding: 0;
+    margin-top: calc(-0.5 * var(--size-4));
+  }
+}
+
+@media (max-width: 1350px) {
+  .hero {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero .post {
+    display: none;
+  }
 }

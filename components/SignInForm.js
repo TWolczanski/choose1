@@ -34,11 +34,11 @@ export default function SignInForm({onSubmit}) {
       className={styles.form}
     >
       <h1>Sign in</h1>
-      <div>
+      <div className={styles.field}>
         <label htmlFor="username">Username</label>
         <input type="text" name="username" />
       </div>
-      <div>
+      <div className={styles.field}>
         <label htmlFor="password">Password</label>
         <input type="password" name="password" />
       </div>

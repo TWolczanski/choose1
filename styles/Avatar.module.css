@@ -14,6 +14,6 @@
 }
 
 .big {
-  width: 7.5rem;
-  height: 7.5rem;
+  width: clamp(5rem, 10vw, 7.5rem);
+  height: clamp(5rem, 10vw, 7.5rem);
 }

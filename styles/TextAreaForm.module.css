@@ -22,3 +22,18 @@
 .hidden {
   visibility: hidden;
 }
+
+@media (max-width: 450px) {
+  .form {
+    margin: 0 calc(0px - var(--gutter));
+  }
+
+  .form .textarea {
+    padding: var(--v-padding-2) var(--gutter);
+    border-radius: 0;
+  }
+
+  .formFocused {
+    border-radius: 0;
+  }
+}

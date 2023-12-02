@@ -108,12 +108,12 @@ export default function NewPostForm() {
     >
       <h1>New post</h1>
 
-      <div className={styles.container}>
+      <div className={styles.field}>
         <label htmlFor="title">Title</label>
         <input type="text" id="title" name="title" />
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.field}>
         <label htmlFor="description">Description</label>
         <TextArea
           id="description"
@@ -124,7 +124,7 @@ export default function NewPostForm() {
         />
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.field}>
         <Select
           options={categories}
           initial="Category"
@@ -133,7 +133,7 @@ export default function NewPostForm() {
         />
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.field}>
         <label htmlFor="type">Type</label>
         <ul className={styles.types}>
           {types.map((t, i) => (
@@ -151,7 +151,7 @@ export default function NewPostForm() {
         <p className={styles.typeInfo}>{typeInfo[type]}</p>
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.field}>
         <Post type={type} images={previews} onImageClick={handlePreviewClick} />
         <input
           type="file"
@@ -162,7 +162,7 @@ export default function NewPostForm() {
         />
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.field}>
         <label htmlFor="cost">Cost</label>
         <Points amount={cost} />
       </div>

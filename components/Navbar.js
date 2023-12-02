@@ -27,7 +27,9 @@ export default function Navbar() {
       <Link href="/" className={styles.logo}>
         <Logo variant="dark" />
       </Link>
-      <Nav className={styles.nav} />
+      <div className={styles.navWrapper}>
+        <Nav className={styles.nav} />
+      </div>
       {user ? (
         <div className={styles.user}>
           <Points amount={user.points.allTime} />
@@ -56,18 +58,28 @@ export default function Navbar() {
             text="Sign in"
             onClick={() =>
               setContent(
-                <AccountForm register={false} onSubmit={() => setContent()} />
+                <AccountForm
+                  register={false}
+                  onSubmit={() => setContent()}
+                  className={styles.accountForm}
+                />
               )
             }
+            className={styles.signInBtn}
           ></Button>
           <Button
             variant="primary"
             text="Sign up"
             onClick={() =>
               setContent(
-                <AccountForm register={true} onSubmit={() => setContent()} />
+                <AccountForm
+                  register={true}
+                  onSubmit={() => setContent()}
+                  className={styles.accountForm}
+                />
               )
             }
+            className={styles.signUpBtn}
           ></Button>
         </div>
       )}

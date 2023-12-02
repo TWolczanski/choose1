@@ -4,11 +4,17 @@
   padding: 0 var(--gutter);
 }
 
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(4rem, 8vw, 5rem) calc(var(--gutter) - var(--size-2));
+}
+
 .top {
   max-width: 1000px;
   width: 100%;
   align-self: center;
-  margin-top: 7.5rem;
+  margin-top: var(--size-4);
 }
 
 .bottom {
@@ -22,12 +28,28 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: var(--size-3);
 }
 
 .modal {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 5rem calc(var(--gutter) - var(--size-2));
+}
+
+@media (max-width: 1200px) {
+  .bottom {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 5rem;
+  }
+
+  .comments {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .modalContainer {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
 }

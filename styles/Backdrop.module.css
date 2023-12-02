@@ -5,12 +5,28 @@
   z-index: 999;
   width: 100vw;
   height: 100vh;
-  padding: 20vh var(--size-2);
+  padding: min(20vh, 15vw) var(--size-2);
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   overflow-y: scroll;
-  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* .backdrop::before,
+.backdrop::after {
+  content: "";
+  width: 100%;
+  height: min(20vh, 15vw);
+  flex-shrink: 0;
+} */
+
+@media (max-width: 800px) {
+  .backdrop {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

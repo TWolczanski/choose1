@@ -52,7 +52,7 @@ export default function Comments({postId, authorId, className, ...props}) {
   return (
     <div
       {...props}
-      className={`${styles.comments} ${className ? className : ""}`}
+      className={`${styles.container} ${className ? className : ""}`}
     >
       {user && postId && (
         <TextAreaForm
@@ -63,7 +63,7 @@ export default function Comments({postId, authorId, className, ...props}) {
       )}
       {comments &&
         (comments.length > 0 ? (
-          <ul>
+          <ul className={styles.comments}>
             {comments.map((c, i) => (
               <li key={i}>
                 <Comment

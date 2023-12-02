@@ -3,10 +3,10 @@ import styles from "styles/AccountForm.module.css";
 import SignInForm from "components/SignInForm";
 import SignUpForm from "components/SignUpForm";
 
-export default function AccountForm({register, onSubmit}) {
+export default function AccountForm({register, onSubmit, className}) {
   const [registration, setRegistration] = useState(register);
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className ?? ""}`}>
       {registration ? (
         <>
           <SignUpForm onSubmit={onSubmit} />

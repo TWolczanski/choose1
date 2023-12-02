@@ -7,14 +7,13 @@ export const metadata = {
   title: "choose1",
 };
 
-export default function RootLayout({children, modal}) {
+export default function RootLayout({children, postModal}) {
   return (
     <html lang="en">
       <body>
         <UserProvider>
           <ModalProvider>
-            <Layout>{children}</Layout>
-            {modal}
+            <Layout postModal={postModal}>{children}</Layout>
           </ModalProvider>
         </UserProvider>
       </body>

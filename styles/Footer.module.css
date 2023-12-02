@@ -10,3 +10,26 @@
 .copyright {
   color: var(--color-bg-light);
 }
+
+@media (max-width: 850px) {
+  .footer {
+    grid-template-columns: auto auto;
+  }
+
+  .copyright {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    row-gap: 2rem;
+  }
+
+  .copyright {
+    justify-self: center;
+  }
+}

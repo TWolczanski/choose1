@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0 var(--gutter);
-  margin-top: 2.5rem;
+  margin-top: var(--size-3);
 }
 
 .timeframe {
@@ -12,7 +12,6 @@
 }
 
 .avatar {
-  margin-top: 1.25rem;
   cursor: pointer;
 }
 
@@ -22,7 +21,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 5rem;
-  margin-top: 2.5rem;
+  margin-top: var(--size-3);
 }
 
 .ranking li {
@@ -44,8 +43,48 @@
 
 .position {
   position: absolute;
-  right: calc(100% + 7.5rem);
+  right: calc(100% + var(--size-4));
   font-size: var(--f-size-1);
   font-weight: var(--f-weight-1);
   color: var(--color-primary-faded);
+}
+
+@media (max-width: 899px) {
+  .timeframe {
+    align-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .timeframe {
+    margin-bottom: 2.5rem;
+  }
+  
+  .ranking {
+    align-items: center;
+    /* width: 100%; */
+  }
+
+  .ranking li {
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+
+  .data {
+    align-items: center;
+    margin-left: 0;
+    margin-top: 1.25rem;
+  }
+
+  .position {
+    /* position: static;
+    align-self: flex-start; */
+    left: 0;
+    bottom: 100%;
+  }
+
+  /* .avatar {
+    margin-top: 1.25rem;;
+  } */
 }

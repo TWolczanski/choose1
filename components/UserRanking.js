@@ -7,12 +7,15 @@ import Points from "components/Points";
 import Avatar from "components/Avatar";
 import Link from "next/link";
 import styles from "styles/UserRanking.module.css";
+import {useMediaQuery} from "react-responsive";
 
 export default function UserRanking({top}) {
   const timeframes = ["All time", "Past year", "Past month", "Past week"];
 
   const [timeframe, setTimeframe] = useState("All time");
   const [topUsers, setTopUsers] = useState();
+
+  const showPodium = useMediaQuery({minWidth: 900});
 
   useEffect(() => {
     const fetchTopUsers = async () => {
@@ -60,28 +63,30 @@ export default function UserRanking({top}) {
         onChange={(val) => setTimeframe(val)}
         className={styles.timeframe}
       />
-      {topUsers && topUsers.length < 3 && <p>There are no users yet.</p>}
-      {topUsers && topUsers.length >= 3 && (
+      {topUsers && topUsers.length == 0 && <p>There are no users yet.</p>}
+      {topUsers && showPodium && topUsers.length >= 3 && (
         <Podium top1={topUsers[0]} top2={topUsers[1]} top3={topUsers[2]} />
       )}
-      {topUsers && topUsers.length > 3 && (
-        <ul className={styles.ranking}>
-          {topUsers.slice(3).map((u, i) => (
-            <li key={u.id}>
-              <Link href={`/users/${u.id}`}>
-                <Avatar img={u.avatar} size="big" className={styles.avatar} />
-              </Link>
-              <div className={styles.data}>
+      {topUsers &&
+        ((showPodium && topUsers.length > 3) ||
+          (!showPodium && topUsers.length > 0)) && (
+          <ul className={styles.ranking}>
+            {topUsers.slice(showPodium ? 3 : 0).map((u, i) => (
+              <li key={u.id}>
+                <span className={styles.position}>{showPodium ? i + 4 : i + 1}.</span>
                 <Link href={`/users/${u.id}`}>
-                  <h2>{u.name}</h2>
+                  <Avatar img={u.avatar} size="big" className={styles.avatar} />
                 </Link>
-                <Points amount={u.points} />
-              </div>
-              <span className={styles.position}>{i + 4}.</span>
-            </li>
-          ))}
-        </ul>
-      )}
+                <div className={styles.data}>
+                  <Link href={`/users/${u.id}`}>
+                    <h2>{u.name}</h2>
+                  </Link>
+                  <Points amount={u.points} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
     </div>
   );
 }

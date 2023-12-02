@@ -20,11 +20,11 @@ async function getAuthor(post) {
   return users.find((u) => u.id === post.authorId);
 }
 
-export default async function Page({params}) {
+export default async function Page({params, insideModal = false}) {
   const post = await getPost(params.id);
   const author = await getAuthor(post);
   return (
-    <div className={styles.container}>
+    <div className={insideModal ? styles.modalContainer : styles.container}>
       <Post
         type={post.type}
         images={post.images}
@@ -38,7 +38,7 @@ export default async function Page({params}) {
           <Author id={author.id} name={author.name} avatar={author.avatar} />
           {post.description && <Paragraph text={post.description} />}
         </div>
-        <Comments postId={post.id} />
+        <Comments postId={post.id} className={styles.comments} />
       </div>
     </div>
   );
