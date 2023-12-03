@@ -1,7 +1,7 @@
 .pages {
   display: flex;
-  gap: var(--size-4);
-  /* gap: min(var(--size-4), 6.25vw); */
+  /* gap: var(--size-4); */
+  gap: min(var(--size-4), 10vw);
 }
 
 .pages li {

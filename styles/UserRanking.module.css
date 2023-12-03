@@ -43,13 +43,13 @@
 
 .position {
   position: absolute;
-  right: calc(100% + var(--size-4));
+  right: calc(100% + min(var(--size-4), 10vw));
   font-size: var(--f-size-1);
   font-weight: var(--f-weight-1);
   color: var(--color-primary-faded);
 }
 
-@media (max-width: 899px) {
+@media (max-width: 999px) {
   .timeframe {
     align-self: center;
   }

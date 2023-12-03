@@ -34,36 +34,40 @@ async function getUser(id) {
 export default async function Page({params}) {
   const user = await getUser(params.id);
   return (
-    <div className={styles.container}>
-      <Avatar img={user.avatar} size="big" className={styles.avatar} />
-      <h2 className={styles.name}>{user.name}</h2>
-      {user.about && <Paragraph text={user.about} className={styles.about} />}
-      <Points amount={user.points} className={styles.points} />
-      {Object.entries(user.links).find(([website, link]) => link) && (
-        <ul className={styles.links}>
-          {Object.entries(user.links).map(
-            ([website, link]) =>
-              link && (
-                <li key={website}>
-                  <a href={link}>
-                    <div className={styles.iconWrapper}>
-                      <Image
-                        src={"/img/" + website + "-icon.svg"}
-                        alt="website icon"
-                        fill={true}
-                        className={styles.icon}
-                      />
-                    </div>
-                  </a>
-                </li>
-              )
-          )}
-        </ul>
-      )}
+    <>
+      <div className={styles.container}>
+        <Avatar img={user.avatar} size="big" className={styles.avatar} />
+        <h2 className={styles.name}>{user.name}</h2>
+        {user.about && <Paragraph text={user.about} className={styles.about} />}
+        <Points amount={user.points} className={styles.points} />
+        {Object.entries(user.links).find(([website, link]) => link) && (
+          <ul className={styles.links}>
+            {Object.entries(user.links).map(
+              ([website, link]) =>
+                link && (
+                  <li key={website}>
+                    <a href={link}>
+                      <div className={styles.iconWrapper}>
+                        <Image
+                          src={"/img/" + website + "-icon.svg"}
+                          alt="website icon"
+                          fill={true}
+                          className={styles.icon}
+                        />
+                      </div>
+                    </a>
+                  </li>
+                )
+            )}
+          </ul>
+        )}
+      </div>
       <h1 className="header">Recent posts</h1>
       <Posts authorId={user.id} />
       <h1 className="header">Recent comments</h1>
-      <Comments authorId={user.id} className={styles.comments} />
-    </div>
+      <div className={styles.container}>
+        <Comments authorId={user.id} className={styles.comments} />
+      </div>
+    </>
   );
 }

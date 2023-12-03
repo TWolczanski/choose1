@@ -15,7 +15,7 @@ export default function UserRanking({top}) {
   const [timeframe, setTimeframe] = useState("All time");
   const [topUsers, setTopUsers] = useState();
 
-  const showPodium = useMediaQuery({minWidth: 900});
+  const showPodium = useMediaQuery({minWidth: 1000});
 
   useEffect(() => {
     const fetchTopUsers = async () => {

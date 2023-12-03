@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   padding: 0 var(--gutter);
+  padding-top: var(--size-4);
 }
 
 .modalContainer {
   display: flex;
   flex-direction: column;
-  padding: clamp(4rem, 8vw, 5rem) calc(var(--gutter) - var(--size-2));
+  padding: var(--size-4) calc(var(--gutter) - var(--size-2));
 }
 
 .top {
   max-width: 1000px;
   width: 100%;
   align-self: center;
-  margin-top: var(--size-4);
 }
 
 .bottom {
