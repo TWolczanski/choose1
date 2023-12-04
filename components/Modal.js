@@ -2,31 +2,23 @@ import {useEffect} from "react";
 import styles from "styles/Modal.module.css";
 import Backdrop from "components/Backdrop";
 
-export default function Modal({open, close, children}) {
+export default function Modal({close, children}) {
   useEffect(() => {
-    if (open) {
-      document.addEventListener(
-        "keydown",
-        (event) => {
-          if (event.key === "Escape" && close) {
-            close();
-          }
-        },
-        {once: true}
-      );
-    }
-  }, [open]);
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") close();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
-    open && (
-      <Backdrop onClick={close}>
-        <div
-          className={styles.modal}
-          onClick={(event) => event.stopPropagation()}
-        >
-          {children}
-        </div>
-      </Backdrop>
-    )
+    <Backdrop onClick={close}>
+      <div
+        className={styles.modal}
+        onClick={(event) => event.stopPropagation()}
+      >
+        {children}
+      </div>
+    </Backdrop>
   );
 }

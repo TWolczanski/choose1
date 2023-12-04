@@ -54,11 +54,11 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 
-html,
+/* html,
 body,
 #__next {
   height: 100%;
-}
+} */
 
 span {
   font-family: 'Poppins', sans-serif;

@@ -1,7 +1,7 @@
 import "styles/globals.css";
-import {ModalProvider} from "context/ModalContext";
-import {UserProvider} from "context/UserContext";
 import Layout from "components/Layout";
+import {UserProvider} from "context/UserContext";
+import {ModalProvider} from "context/ModalContext";
 
 export const metadata = {
   title: "choose1",
@@ -9,14 +9,10 @@ export const metadata = {
 
 export default function RootLayout({children, postModal}) {
   return (
-    <html lang="en">
-      <body>
-        <UserProvider>
-          <ModalProvider>
-            <Layout postModal={postModal}>{children}</Layout>
-          </ModalProvider>
-        </UserProvider>
-      </body>
-    </html>
+    <UserProvider>
+      <ModalProvider>
+        <Layout postModal={postModal}>{children}</Layout>
+      </ModalProvider>
+    </UserProvider>
   );
 }

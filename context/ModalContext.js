@@ -1,7 +1,6 @@
 "use client";
 
 import {createContext, useContext, useState} from "react";
-import Modal from "components/Modal";
 
 const ModalContext = createContext();
 
@@ -16,11 +15,6 @@ export function ModalProvider({children}) {
         setContent,
       }}
     >
-      {content && (
-        <Modal open={open} close={() => setContent()}>
-          {content}
-        </Modal>
-      )}
       {children}
     </ModalContext.Provider>
   );

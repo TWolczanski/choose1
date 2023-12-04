@@ -7,14 +7,17 @@ import {useModal} from "context/ModalContext";
 import {useEffect} from "react";
 import WebsiteInfo from "components/WebsiteInfo";
 import {usePathname, useSelectedLayoutSegments} from "next/navigation";
+import Modal from "./Modal";
 
 export default function Layout({children, postModal}) {
-  const {open} = useModal();
+  const {open, content, setContent} = useModal();
 
   const pathname = usePathname();
   const segments = useSelectedLayoutSegments("postModal");
-  const showPostModal =
+  const postModalOpen =
     pathname.startsWith("/posts/") && segments[1] === "(.)posts";
+
+  const modalOpen = open || postModalOpen;
 
   // const {setContent} = useModal();
 
@@ -23,17 +26,18 @@ export default function Layout({children, postModal}) {
   // }, []);
 
   return (
-    <>
-      <div
-        className={`${styles.container} ${
-          open || showPostModal ? styles.modalOpen : ""
-        }`}
-      >
-        <Navbar />
-        <div className={styles.content}>{children}</div>
-        <Footer />
-      </div>
-      {showPostModal && postModal}
-    </>
+    <html lang="en">
+      <body className={modalOpen ? styles.modalOpen : ""}>
+        <div className={styles.container}>
+          <Navbar />
+          <div className={styles.content}>{children}</div>
+          <Footer />
+        </div>
+
+        {open && <Modal close={() => setContent()}>{content}</Modal>}
+
+        {postModalOpen && postModal}
+      </body>
+    </html>
   );
 }
