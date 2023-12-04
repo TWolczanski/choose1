@@ -6,3 +6,10 @@
   gap: 1rem;
   cursor: pointer;
 }
+
+.author span {
+  width: 13rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

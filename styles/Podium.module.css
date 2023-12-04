@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
 }
 
 .avatar {
@@ -24,6 +24,10 @@
 
 .bottom p {
   margin-top: 0.75rem;
+}
+
+.bottom h2 {
+  overflow-wrap: anywhere;
 }
 
 .top2 {

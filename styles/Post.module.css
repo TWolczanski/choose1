@@ -9,8 +9,12 @@
 }
 
 .title {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   align-self: center;
+  text-align: center;
 }
 
 .clickable {

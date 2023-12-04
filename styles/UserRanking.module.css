@@ -39,6 +39,10 @@
 
 .data h2 {
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 20rem;
 }
 
 .position {
@@ -52,29 +56,33 @@
 @media (max-width: 999px) {
   .timeframe {
     align-self: center;
-  }
-}
-
-@media (max-width: 500px) {
-  .timeframe {
     margin-bottom: 2.5rem;
   }
   
   .ranking {
     align-items: center;
-    /* width: 100%; */
+    /* width: min(20rem, 100%); */
   }
 
   .ranking li {
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
   }
 
   .data {
+    /* width: 100%; */
     align-items: center;
     margin-left: 0;
     margin-top: 1.25rem;
+  }
+
+  .data h2 {
+    /* width: 100%; */
+    white-space: normal;
+    overflow: visible;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
 
   .position {

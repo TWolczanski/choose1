@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Points({amount, className}) {
   return (
-    <div className={`${styles.container} ${className}`}>
+    <div className={`${styles.container} ${className ?? ""}`}>
       <div className={styles.iconWrapper}>
         <Image
           src="/img/point-icon.svg"

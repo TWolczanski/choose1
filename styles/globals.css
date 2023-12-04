@@ -101,6 +101,7 @@ p {
   font-weight: var(--f-weight-1);
   line-height: var(--line-height-1);
   color: var(--color-primary-faded);
+  overflow-wrap: anywhere;
 }
 
 label {

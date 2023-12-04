@@ -31,6 +31,10 @@
   gap: var(--size-3);
 }
 
+.info h2 {
+  overflow-wrap: anywhere;
+}
+
 .modal {
   width: 100%;
 }
