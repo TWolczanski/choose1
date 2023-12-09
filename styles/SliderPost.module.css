@@ -62,14 +62,16 @@
 
 .horizontalClickableArea {
   width: 100%;
-  height: var(--size-2);
+  height: var(--size-3);
   position: absolute;
   z-index: 1;
+  touch-action: none;
 }
 
 .verticalClickableArea {
-  width: var(--size-2);
+  width: var(--size-3);
   height: 100%;
   position: absolute;
   z-index: 1;
+  touch-action: none;
 }

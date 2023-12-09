@@ -20,29 +20,34 @@ export default function SliderPost({
   const imageWrapper1 = useRef(null);
   const imageWrapper2 = useRef(null);
 
+  function handleSliderMove(event) {
+    event.preventDefault();
+    const rect = imageWrappers.current.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    if (orientation === "vertical") {
+      imageWrapper1.current.style.flex = x;
+      imageWrapper2.current.style.flex = imageWrappers.current.clientWidth - x;
+    } else if (orientation === "horizontal") {
+      imageWrapper1.current.style.flex = y;
+      imageWrapper2.current.style.flex = imageWrappers.current.clientHeight - y;
+    }
+  }
+
+  function handleStartSliding(event) {
+    event.preventDefault();
+    document.addEventListener("pointerup", () => setSliding(false), {
+      once: true,
+    });
+    setSliding(true);
+  }
+
   return (
     <div className={`${postStyles.post} ${className ? className : ""}`}>
       <div
         className={`${styles.images} ${styles[orientation]}`}
         ref={imageWrappers}
-        onMouseMove={
-          sliding
-            ? (event) => {
-                const rect = imageWrappers.current.getBoundingClientRect();
-                const x = event.clientX - rect.left;
-                const y = event.clientY - rect.top;
-                if (orientation === "vertical") {
-                  imageWrapper1.current.style.flex = x;
-                  imageWrapper2.current.style.flex =
-                    imageWrappers.current.clientWidth - x;
-                } else if (orientation === "horizontal") {
-                  imageWrapper1.current.style.flex = y;
-                  imageWrapper2.current.style.flex =
-                    imageWrappers.current.clientHeight - y;
-                }
-              }
-            : undefined
-        }
+        onPointerMove={sliding ? handleSliderMove : undefined}
       >
         <div
           className={`
@@ -72,13 +77,7 @@ export default function SliderPost({
           className={`${styles.slider} ${styles[orientation]} ${
             styles[orientation + "Cursor"]
           }`}
-          onMouseDown={(event) => {
-            event.preventDefault();
-            document.addEventListener("mouseup", () => setSliding(false), {
-              once: true,
-            });
-            setSliding(true);
-          }}
+          onPointerDown={handleStartSliding}
         >
           <div className={styles.sliderPrimary}></div>
           <div className={styles.sliderBg}></div>
