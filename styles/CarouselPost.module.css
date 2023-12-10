@@ -1,8 +1,25 @@
-.imageWrapper {
-  position: relative;
+.images {
+  display: flex;
+  gap: var(--size-1);
   aspect-ratio: 4 / 3;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+}
+
+.images::-webkit-scrollbar {
+  display: none;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
   background-color: var(--color-bg-light);
   overflow: hidden;
+  flex-shrink: 0;
+  scroll-snap-align: center;
 }
 
 .image {
