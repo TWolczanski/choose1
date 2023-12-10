@@ -1,4 +1,5 @@
 import {useRef, useState, createContext, useContext} from "react";
+import {Manager, Popper, Reference} from "react-popper";
 import styles from "styles/Dropdown.module.css";
 
 const DropdownContext = createContext();
@@ -28,41 +29,55 @@ export function Dropdown({children, onOpen, onClose, className, ...props}) {
   }
 
   return (
-    <DropdownContext.Provider value={{open, updateOpen}}>
-      <div
-        {...props}
-        className={`${styles.dropdown} ${className || ""}`}
-        ref={ref}
-      >
-        {children}
-      </div>
-    </DropdownContext.Provider>
+    <Manager>
+      <DropdownContext.Provider value={{open, updateOpen}}>
+        <div
+          {...props}
+          className={`${styles.dropdown} ${className || ""}`}
+          ref={ref}
+        >
+          {children}
+        </div>
+      </DropdownContext.Provider>
+    </Manager>
   );
 }
 
 export function DropdownToggle({children, ...props}) {
   const {open, updateOpen} = useDropdown();
   return (
-    <div {...props} onClick={() => updateOpen(!open)}>
-      {children}
-    </div>
+    <Reference>
+      {({ref}) => (
+        <div {...props} onClick={() => updateOpen(!open)} ref={ref}>
+          {children}
+        </div>
+      )}
+    </Reference>
   );
 }
 
 export function DropdownMenu({children, className, ...props}) {
   const {open, updateOpen} = useDropdown();
   return (
-    <>
-      {open && (
-        <ul
-          {...props}
-          onClick={() => updateOpen(false)}
-          className={`${styles.menu} ${className || ""}`}
-        >
-          {children}
-        </ul>
-      )}
-    </>
+    <Popper placement="bottom-start">
+      {({ref, style, placement}) =>
+        open && (
+          <ul
+            {...props}
+            onClick={() => updateOpen(false)}
+            className={`${styles.menu} ${
+              placement === "bottom-end" || placement === "top-end"
+                ? styles.textAlignRight
+                : ""
+            } ${className || ""}`}
+            ref={ref}
+            style={style}
+          >
+            {children}
+          </ul>
+        )
+      }
+    </Popper>
   );
 }
 

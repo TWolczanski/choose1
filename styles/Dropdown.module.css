@@ -6,12 +6,14 @@
 }
 
 .menu {
-  position: absolute;
-  top: calc(100% + var(--v-padding-1));
-  left: calc(-1 * var(--h-padding-1));
   white-space: nowrap;
   background-color: var(--color-bg-light);
   padding: var(--v-padding-1) 0;
+  margin: var(--v-padding-1) calc(-1 * var(--h-padding-1));
+}
+
+.textAlignRight {
+  text-align: right;
 }
 
 .item {
