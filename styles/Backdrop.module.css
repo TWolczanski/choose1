@@ -16,14 +16,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* .backdrop::before,
-.backdrop::after {
-  content: "";
-  width: 100%;
-  height: min(20vh, 15vw);
-  flex-shrink: 0;
-} */
-
 @media (max-width: 800px) {
   .backdrop {
     padding-left: 0;

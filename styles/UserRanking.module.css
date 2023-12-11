@@ -61,24 +61,20 @@
   
   .ranking {
     align-items: center;
-    /* width: min(20rem, 100%); */
   }
 
   .ranking li {
     flex-direction: column;
-    /* width: 100%; */
     position: relative;
   }
 
   .data {
-    /* width: 100%; */
     align-items: center;
     margin-left: 0;
     margin-top: 1.25rem;
   }
 
   .data h2 {
-    /* width: 100%; */
     white-space: normal;
     overflow: visible;
     overflow-wrap: anywhere;
@@ -86,13 +82,7 @@
   }
 
   .position {
-    /* position: static;
-    align-self: flex-start; */
     left: 0;
     bottom: 100%;
   }
-
-  /* .avatar {
-    margin-top: 1.25rem;;
-  } */
 }

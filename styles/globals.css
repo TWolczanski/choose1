@@ -15,11 +15,7 @@
   --max-width: 1920px;
   --gutter: clamp(1.4rem, -0.84rem + 11.2vw, 12.6rem);
   --size-1: 0.4375rem;
-  /* --size-2: min(2.1875rem, 4vw);
-  --size-3: clamp(2rem, 6vw, 2.5rem);
-  --size-4: clamp(3.25rem, 10vw, 7.5rem); */
   --size-2: min(2.1875rem, 4vw);
-  /* --size-2: 2.1875rem; */
   --size-3: 2.5rem;
   --size-4: 7.5rem;
   --v-padding-1: 0.6rem;
@@ -48,17 +44,7 @@ html {
 
 body {
   background-color: var(--color-bg);
-  /* text-rendering: optimizeLegibility; */
-  /* font-smooth: always; */
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
 }
-
-/* html,
-body,
-#__next {
-  height: 100%;
-} */
 
 span {
   font-family: 'Poppins', sans-serif;
@@ -133,12 +119,6 @@ input[type="password"] {
   font-family: 'Verdana', monospace;
   letter-spacing: 0.15rem;
 }
-
-/* input[type="text"]:focus,
-input[type="password"]:focus {
-  background-color: var(--color-primary-faded);
-  color: var(--color-bg-light);
-} */
 
 .header {
   align-self: center;

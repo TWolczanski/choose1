@@ -29,9 +29,6 @@
   .navbar {
     padding: 0;
     padding-top: 1.7rem;
-    /* grid-template-areas:
-      "nav nav nav nav"
-      ". logo buttonsOrUser ."; */
     grid-template-areas:
       ". logo buttonsOrUser ."
       "nav nav nav nav";
@@ -45,7 +42,6 @@
     justify-self: stretch;
     display: flex;
     justify-content: center;
-    /* padding: var(--v-padding-1) 0; */
     padding: 1rem 0;
     background-color: var(--color-bg-light);
   }
@@ -61,51 +57,7 @@
 }
 
 @media (max-width: 435px) {
-  /* .buttons {
-    flex-direction: column;
-    gap: 0.75rem;
-  } */
-
   .buttons .signInBtn {
     display: none;
   }
-
-  /* .nav {
-    width: 100%;
-    padding: 0 var(--gutter);
-  } */
 }
-
-/* @media (max-width: 520px) {
-  .navbar {
-    padding: 0;
-    padding-top: 1.7rem;
-    grid-template-areas:
-      ". logo ."
-      ". buttonsOrUser ."
-      "nav nav nav";
-    grid-template-columns: var(--gutter) auto auto var(--gutter);
-    grid-template-rows: auto auto auto;
-    row-gap: 2rem;
-  }
-
-  .navWrapper {
-    grid-area: nav;
-    justify-self: stretch;
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-    background-color: var(--color-bg-light);
-  }
-
-  .logo {
-    grid-area: logo;
-    justify-self: center;
-  }
-
-  .buttons,
-  .user {
-    grid-area: buttonsOrUser;
-    justify-self: center;
-  }
-} */

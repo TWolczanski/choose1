@@ -1,6 +1,5 @@
 .pages {
   display: flex;
-  /* gap: var(--size-4); */
   gap: min(var(--size-4), 10vw);
 }
 
@@ -43,17 +42,8 @@
 @media (max-width: 1350px) {
   .bullet {
     left: 50%;
-    /* bottom: calc(0px - (var(--size-1) * 2)); */
     bottom: -1rem;
     transform: translateX(-50%);
-    /* width: calc(var(--size-1) * 2); */
     border-radius: var(--border-radius);
   }
 }
-
-/* @media (max-width: 400px) {
-  .pages {
-    gap: 0;
-    justify-content: space-between;
-  }
-} */

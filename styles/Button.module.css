@@ -12,7 +12,6 @@
 
 .btn:hover {
   border-radius: 0px;
-  /* border-radius: var(--size-1); */
 }
 
 .light {

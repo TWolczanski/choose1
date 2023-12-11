@@ -22,11 +22,12 @@ async function getUser(id) {
     points: user.points.allTime,
     links: {
       website: user.website,
-      facebook: user.facebook && ("https://www.facebook.com/" + user.facebook),
-      instagram: user.instagram && ("https://www.instagram.com/" + user.instagram),
-      twitter: user.twitter && ("https://twitter.com/" + user.twitter),
-      behance: user.behance && ("https://www.behance.net/" + user.behance),
-      dribbble: user.dribbble && ("https://dribbble.com/" + user.dribbble),
+      facebook: user.facebook && "https://www.facebook.com/" + user.facebook,
+      instagram:
+        user.instagram && "https://www.instagram.com/" + user.instagram,
+      twitter: user.twitter && "https://twitter.com/" + user.twitter,
+      behance: user.behance && "https://www.behance.net/" + user.behance,
+      dribbble: user.dribbble && "https://dribbble.com/" + user.dribbble,
     },
   };
 }

@@ -18,7 +18,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, min(31.25rem, 100%));
-  /* grid-template-columns: repeat(auto-fill, minmax(min(31.25rem, 100%), 1fr)); */
   gap: 5rem var(--size-2);
   justify-content: center;
 }

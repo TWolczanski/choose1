@@ -73,7 +73,9 @@ export default function UserRanking({top}) {
           <ul className={styles.ranking}>
             {topUsers.slice(showPodium ? 3 : 0).map((u, i) => (
               <li key={u.id}>
-                <span className={styles.position}>{showPodium ? i + 4 : i + 1}.</span>
+                <span className={styles.position}>
+                  {showPodium ? i + 4 : i + 1}.
+                </span>
                 <Link href={`/users/${u.id}`}>
                   <Avatar img={u.avatar} size="big" className={styles.avatar} />
                 </Link>

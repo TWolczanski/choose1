@@ -41,7 +41,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: var(--size-4); */
   column-gap: var(--size-4);
   row-gap: var(--size-3);
 }
@@ -65,7 +64,6 @@
 
 .text {
   max-width: 36.5rem;
-  /* max-width: 585px; */
 }
 
 .text h2,
