@@ -40,8 +40,8 @@ export default function CarouselPost({
             `}
             onClick={() => {
               if (clickable) {
-                if (onImageClick) onImageClick(i);
-                else if (!chosen) setChosen(i);
+                if (onImageClick) onImageClick(i + 1);
+                else if (!chosen) setChosen(i + 1);
               }
             }}
           >
@@ -55,7 +55,7 @@ export default function CarouselPost({
             {clickable && (
               <div
                 className={`${postStyles.overlay} ${
-                  i === chosen ? postStyles.secondary : postStyles.primary
+                  i + 1 === chosen ? postStyles.secondary : postStyles.primary
                 }`}
               ></div>
             )}
