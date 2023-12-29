@@ -1,0 +1,8 @@
+.redirection {
+  color: var(--color-primary-faded);
+  cursor: pointer;
+}
+
+.redirection:hover {
+  color: var(--color-primary);
+}

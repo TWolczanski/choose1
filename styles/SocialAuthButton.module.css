@@ -1,0 +1,10 @@
+.btnContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnContent img {
+  height: var(--line-height-1);
+  width: auto;
+}

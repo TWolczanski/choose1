@@ -56,28 +56,30 @@ export default function Navbar() {
           <Button
             variant="light"
             text="Sign in"
-            onClick={() =>
-              setContent(
-                <AccountForm
-                  register={false}
-                  onSubmit={() => setContent()}
-                  className={styles.accountForm}
-                />
-              )
+            onClick={
+              () => router.push("/sign-in")
+              // setContent(
+              //   <AccountForm
+              //     register={false}
+              //     onSubmit={() => setContent()}
+              //     className={styles.accountForm}
+              //   />
+              // )
             }
             className={styles.signInBtn}
           ></Button>
           <Button
             variant="primary"
             text="Sign up"
-            onClick={() =>
-              setContent(
-                <AccountForm
-                  register={true}
-                  onSubmit={() => setContent()}
-                  className={styles.accountForm}
-                />
-              )
+            onClick={
+              () => router.push("/sign-up")
+              // setContent(
+              //   <AccountForm
+              //     register={true}
+              //     onSubmit={() => setContent()}
+              //     className={styles.accountForm}
+              //   />
+              // )
             }
             className={styles.signUpBtn}
           ></Button>

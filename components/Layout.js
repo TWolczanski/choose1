@@ -7,17 +7,19 @@ import {useModal} from "context/ModalContext";
 import {useEffect} from "react";
 import WebsiteInfo from "components/WebsiteInfo";
 import {usePathname, useSelectedLayoutSegments} from "next/navigation";
-import Modal from "./Modal";
+import Modal from "components/Modal";
 
-export default function Layout({children, postModal}) {
+export default function Layout({children, pageModal}) {
   const {open, content, setContent} = useModal();
 
   const pathname = usePathname();
-  const segments = useSelectedLayoutSegments("postModal");
-  const postModalOpen =
-    pathname.startsWith("/posts/") && segments[1] === "(.)posts";
+  const segments = useSelectedLayoutSegments("pageModal");
+  const pageModalOpen =
+    (pathname.startsWith("/posts/") && segments[1] === "(.)posts") ||
+    (pathname === "/sign-in" && segments[1] === "(.)sign-in") ||
+    (pathname === "/sign-up" && segments[1] === "(.)sign-up");
 
-  const modalOpen = open || postModalOpen;
+  const modalOpen = open || pageModalOpen;
 
   // const {setContent} = useModal();
 
@@ -35,8 +37,7 @@ export default function Layout({children, postModal}) {
         </div>
 
         {open && <Modal close={() => setContent()}>{content}</Modal>}
-
-        {postModalOpen && postModal}
+        {pageModalOpen && pageModal}
       </body>
     </html>
   );
