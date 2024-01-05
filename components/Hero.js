@@ -2,8 +2,16 @@ import styles from "styles/Hero.module.css";
 import Button from "components/Button";
 import Link from "next/link";
 import CarouselPost from "components/CarouselPost";
+import {server} from "config";
 
-export default function Hero({examplePost}) {
+async function getExamplePost() {
+  const res = await fetch(`${server}/data/posts.json`, {cache: "no-store"});
+  const posts = await res.json();
+  return posts[Math.floor(Math.random() * posts.length)];
+}
+
+export default async function Hero() {
+  const examplePost = await getExamplePost();
   return (
     <section className={styles.hero}>
       <div className={styles.main}>
