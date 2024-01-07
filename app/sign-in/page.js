@@ -15,7 +15,7 @@ export default function Page({insideModal = false}) {
   const [errors, setErrors] = useState();
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const {setUser} = useUser();
+  const {fetchUser} = useUser();
 
   const login = useGoogleLogin({
     flow: "auth-code",
@@ -31,6 +31,7 @@ export default function Page({insideModal = false}) {
       });
 
       if (response.ok) {
+        await fetchUser();
         if (insideModal) router.back();
         else router.push("/");
       }
@@ -54,14 +55,14 @@ export default function Page({insideModal = false}) {
       }),
     });
 
-    setLoading(false);
-
     if (response.ok) {
+      await fetchUser();
       if (insideModal) router.back();
       else router.push("/");
     } else {
       const data = await response.json();
       setErrors(data);
+      setLoading(false);
     }
   }
 

@@ -10,7 +10,7 @@ export default function Avatar({img, size, className, ...props}) {
       }`}
     >
       <Image
-        src={img}
+        src={img ?? "/img/users/default-avatar.svg"}
         alt="user's avatar"
         fill={true}
         className={styles.image}

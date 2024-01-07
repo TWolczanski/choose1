@@ -4,16 +4,18 @@ import {useState} from "react";
 import styles from "styles/AuthenticationForm.module.css";
 import formStyles from "styles/Form.module.css";
 import Button from "components/Button";
+import {useUser} from "context/UserContext";
 import Link from "next/link";
+import {useGoogleLogin} from "@react-oauth/google";
 import Loading from "components/Loading";
 import {useRouter} from "next/navigation";
-import {useGoogleLogin} from "@react-oauth/google";
 import SocialAuthButton from "components/SocialAuthButton";
 
 export default function Page({insideModal = false}) {
   const [errors, setErrors] = useState();
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const {fetchUser} = useUser();
 
   const login = useGoogleLogin({
     flow: "auth-code",
@@ -29,6 +31,7 @@ export default function Page({insideModal = false}) {
       });
 
       if (response.ok) {
+        await fetchUser();
         if (insideModal) router.back();
         else router.push("/");
       }
@@ -54,14 +57,14 @@ export default function Page({insideModal = false}) {
       }),
     });
 
-    setLoading(false);
-
     if (response.ok) {
+      await fetchUser();
       if (insideModal) router.back();
       else router.push("/");
     } else {
       const data = await response.json();
       setErrors(data);
+      setLoading(false);
     }
   }
 

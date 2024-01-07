@@ -6,22 +6,26 @@ const UserContext = createContext();
 
 export function UserProvider({children}) {
   const [user, setUser] = useState();
+  const [loadingUser, setLoadingUser] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     const response = await fetch("/api/auth/user");
-  //     if (response.status === 200) {
-  //       const data = response.json();
-  //       setUser(data);
-  //     } else {
-  //       setUser();
-  //     }
-  //   };
-  //   fetchUser();
-  // }, []);
+  async function fetchUser() {
+    setLoadingUser(true);
+    const res = await fetch("/api/users/me");
+    if (res.status === 200) {
+      const currUser = await res.json();
+      setUser(currUser);
+    } else {
+      setUser();
+    }
+    setLoadingUser(false);
+  }
+
+  useEffect(() => {
+    fetchUser();
+  }, []);
 
   return (
-    <UserContext.Provider value={{user, setUser}}>
+    <UserContext.Provider value={{user, fetchUser, loadingUser}}>
       {children}
     </UserContext.Provider>
   );
